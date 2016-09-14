@@ -1,0 +1,12 @@
+//= js/app.js
+//= js/services/httpRequestTracker.js
+//= js/services/authInterceptor.js
+//= js/services/authService.js
+//= js/services/modalService.js
+//= js/modules/home/home.js
+//= js/modules/errors/errors.js
+//= js/modules/auth/auth.js
+//= js/modules/auth/login/auth.login.js
+//= js/modules/auth/signup/auth.signup.js
+//= js/modules/auth/password_reset/auth.password_reset.js
+//= js/modules/auth/activation/auth.activation.js

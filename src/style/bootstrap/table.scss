@@ -1,0 +1,31 @@
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.table {
+    display: table;
+    table-layout: fixed;
+}
+
+.t-row {
+    display: table-row;
+}
+
+.t-cell {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.table_vert-align-mid .t-cell {
+    vertical-align: middle;
+}
+
+.table_vert-align-bot .t-cell {
+    vertical-align: bottom;
+}
+
+
+.table_cell-center .t-cell {
+    text-align: center;
+}

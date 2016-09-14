@@ -1,0 +1,133 @@
+$base-button-height: 4*$step;
+$base-button-padding: ($base-button-height / 2);
+$base-btn-shadow: 2px;
+$btn-base-box-shadow: inset 0 -2px 0 rgba(31,45,61,0.3); //, 0 1px 2px rgba(0,0,0,.2);
+$btn-ghost-box-shadow: $color-dark-smoke 0px 0px 0px 1px inset;
+
+button::-moz-focus-inner, input[type=submit]::-moz-focus-inner, input[type=button]::-moz-focus-inner {
+    padding: 0;
+    border: 0 none;
+}
+
+.base-button {
+    color: #fff;
+    border: 0;
+    @include border-radius($base-border-radius);
+    cursor: pointer;
+    display: inline-block;
+    outline: none;
+    transition: all 80ms linear;
+    -webkit-font-smoothing: antialiased;
+    @include no-select;
+    white-space: nowrap;
+    text-decoration: none !important;
+    min-width: 40px;
+    font-family: $base-font-family;
+    position: relative;
+    text-shadow: 0 1px rgba(0,0,0,.1);
+
+    &:hover {
+        @include box-shadow($btn-base-box-shadow);
+    }
+
+    &:active {
+        top: 1px;
+        box-shadow: inset 0 -1px 0 rgba(31,45,61,0.3);
+    }
+}
+
+// -------------
+
+.btn-m {
+    @extend .base-button;
+    font-size: $font-m;
+    height: $base-button-height;
+    line-height: $base-button-height;
+    padding: 0 $base-button-padding;
+}
+
+$btm-s-height: round(($base-button-height / $btn-multiplier)/2)*2;
+.btn-s {
+    @extend .base-button;
+    font-size: $font-s;
+    height: $btm-s-height;
+    line-height: $btm-s-height;
+    padding: 0 ($btm-s-height/2);
+}
+
+$btm-xs-height: round(($base-button-height / $btn-multiplier / $btn-multiplier)/2)*2;
+.btn-xs {
+    @extend .base-button;
+    font-size: $font-xs;
+    height: $btm-xs-height;
+    line-height: $btm-xs-height;
+    padding: 0 ($btm-xs-height/2);
+}
+
+$btm-l-height: round(($base-button-height * $btn-multiplier)/2)*2;
+.btn-l {
+    @extend .base-button;
+    font-size: $font-l;
+    height: $btm-l-height;
+    line-height: $btm-l-height;
+    padding: 0 ($btm-l-height / 2);
+}
+
+$btm-xl-height: round(($base-button-height * $btn-multiplier * $btn-multiplier)/2)*2;
+.btn-xl {
+    @extend .base-button;
+    font-size: $font-xl;
+    height: $btm-xl-height;
+    line-height: $btm-xl-height;
+    padding: 0 ($btm-xl-height / 2);
+//    box-shadow: inset 0 -3px 0 rgba(31,45,61,0.3);
+}
+
+// -------------
+
+.btn-block {
+    display: block;
+}
+
+.btn-ghost {
+    color: $color-slate;
+    background: transparent;
+    @include box-shadow($btn-ghost-box-shadow);
+    text-shadow: none;
+
+    &:hover {
+        color: #fff;
+    }
+
+    &:visited {
+        background: transparent;
+    }
+}
+
+.btn-outlined {
+    color: $color-slate;
+    @include box-shadow($btn-ghost-box-shadow);
+    text-shadow: none;
+
+    &:hover {
+        color: #fff;
+    }
+}
+
+.btn-disabled {
+    top: 0 !important;
+    cursor: default;
+    background: $color-snow !important;
+    color: $color-silver;
+    @include box-shadow($btn-ghost-box-shadow !important);
+    text-shadow: none;
+}
+
+.btn-loading {
+    @extend .btn-disabled;
+//    @include box-shadow($color-extra-dark-smoke 0px 0px 0px 1px inset);
+    animation: loading-stripes 2s infinite linear;
+    background-image: linear-gradient(-45deg, rgba(150, 150, 150, 0.2) 25%, transparent 25%, transparent 50%, rgba(150, 150, 150, 0.2) 50%, rgba(150, 150, 150, 0.2) 75%, transparent 75%, transparent) !important;
+    //background-image: url('data:image/svg+xml;base64,str2base64([code]<svg fill="#ccc" width="50" height="50" viewbox="0 0 40 40"><path d="M 20,0 40,0 0,40 0,20"/></svg>[/code])');
+    background-size: 50px 50px !important;
+}
