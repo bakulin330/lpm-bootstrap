@@ -20,4 +20,194 @@ html(lang="ru", ng-app="app")
         noscript#nojs
             h1 To use App, please enable JavaScript.
 
-        div(ui-view)
+        h1 Home
+        div(ng-bind="home.test")
+        div
+            a(ui-sref="errors-list") List
+
+        div(style="width:850px; margin:0 auto;")
+            div.table
+                div.t-row
+                    div.t-cell
+                        div.card.card_blue Blue #[br] #1FB6FF
+
+            div(style="margin-top:30px")
+                div.font-card
+                    div.font-xxl Съешь ещё этих мягких французских булок, да выпей чаю
+                    div.font-xxl.mt1 The quick brown fox jumps over the lazy dog
+                    div.font-s.color-silver.mt1 XXL
+
+                div.font-card
+                    div.font-xl Съешь ещё этих мягких французских булок, да выпей чаю
+                    div.font-xl.mt1 The quick brown fox jumps over the lazy dog
+                    div.font-s.color-silver.mt1 XL
+
+                div.font-card
+                    div.font-l Съешь ещё этих мягких французских булок, да выпей чаю
+                    div.font-l.mt1 The quick brown fox jumps over the lazy dog
+                    div.font-s.color-silver.mt1 L
+
+                div.font-card
+                    div.font-m Съешь ещё этих мягких французских булок, да выпей чаю
+                    div.font-m.mt1 The quick brown fox jumps over the lazy dog
+                    div.font-s.color-silver.mt1 M
+
+                div.font-card
+                    div.font-s Съешь ещё этих мягких французских булок, да выпей чаю
+                    div.font-s.mt1 The quick brown fox jumps over the lazy dog
+                    div.font-s.color-silver.mt1 S
+
+                div.font-card
+                    div.font-xs Съешь ещё этих мягких французских булок, да выпей чаю
+                    div.font-xs.mt1 The quick brown fox jumps over the lazy dog
+                    div.font-s.color-silver.mt1 XS
+
+
+            div.table.table_cell-center.mt3#tbl-btns
+                div.t-row
+                    div.t-cell
+                        button.bg-default.btn-xl Кнопка
+                    div.t-cell
+                        button.bg-default.btn-l Кнопка
+                    div.t-cell
+                        button.bg-default.btn-m Кнопка
+                    div.t-cell
+                        button.bg-default.btn-s Кнопка
+                    div.t-cell
+                        button.bg-default.btn-xs Кнопка
+
+                div.t-row
+                    div.t-cell
+                        div.font-s.color-silver XL Button
+                    div.t-cell
+                        div.font-s.color-silver L Button
+                    div.t-cell
+                        div.font-s.color-silver M Button
+                    div.t-cell
+                        div.font-s.color-silver S Button
+                    div.t-cell
+                        div.font-s.color-silver XS Button
+
+
+            div.mt3
+                button.btn-m.bg-default Default
+                button.btn-m.bg-positive.ml2 Позитив
+                button.btn-m.bg-negative.ml2 Негатив
+
+            div.mt3
+                button.btn-m.btn-ghost.bg-default-hover Ghost
+                button.btn-m.btn-ghost.bg-positive-hover.ml2 Ghost positive
+                button.btn-m.btn-ghost.bg-negative-hover.ml2 Ghost negative
+
+            div.mt3.bg-snow
+                button.btn-m.btn-outlined.bg-white.bg-default-hover Outlined
+                button.btn-m.btn-disabled.ml2 Disabled
+                button.btn-m.btn-loading.ml2 Loading
+
+            div.font-xxl.mt3 Text input
+
+            div.mt1
+                div.table
+                    div.t-row
+                        div.t-cell
+                            input.input-s(placeholder="Плейсхолдер")
+                        div.t-cell.pl1
+                            button.btn-s.bg-default Default
+
+            div.mt3
+                div.table
+                    div.t-row
+                        div.t-cell
+                            input.input-m(placeholder="Плейсхолдер")
+                        div.t-cell.pl1
+                            button.btn-m.bg-default Default
+
+            div.mt3
+                div.table
+                    div.t-row
+                        div.t-cell
+                            input.input-l(placeholder="Плейсхолдер")
+                        div.t-cell.pl1
+                            button.btn-l.bg-default Default
+
+            div.mt3
+                div.table
+                    div.t-row
+                        div.t-cell
+                            input.input-xl(placeholder="Плейсхолдер")
+                        div.t-cell.pl1
+                            button.btn-xl.bg-default Default
+
+            div.mt3
+                div.table
+                    div.t-row
+                        div.t-cell
+                            input.input-xl.input-disabled(value="Disabled input")
+                        div.t-cell.pl1
+                            button.btn-xl.bg-default.btn-disabled Disabled
+
+            div.font-xxl.mt3 Textarea
+
+            div.mt1
+                div.table.w-full
+                    div.t-row
+                        div.t-cell
+                            textarea.textarea-s(rows="2")
+                                | some text
+                                | etxt
+                        div.t-cell.pl1
+                            textarea.textarea-m(rows="2")
+                                | some text
+                                | etxt
+                        div.t-cell.pl1
+                            textarea.textarea-l(rows="2")
+                                | some text
+                                | etxt
+                        div.t-cell.pl1
+                            textarea.textarea-xl(rows="2")
+                                | some text
+                                | etxt
+
+                    div.t-row
+                        div.t-cell S
+                        div.t-cell M
+                        div.t-cell L
+                        div.t-cell XL
+
+
+                textarea.textarea-s.mt1.textarea-disabled(rows="2")
+                    | some text
+                    | etxt
+
+
+
+
+
+
+            div.font-xxl.mt3 Link
+
+            div.mt1
+                div Some #[a text and] link.
+                div Some #[a(class="link-dark") text and] link.
+                div Some #[a(class="link-light") text and] link.
+                div Some #[a(class="link-negative") negative] link.
+
+            div.mt3
+                div
+                    label.checkbox
+                        input(type="checkbox")
+                        span.control-indicator
+                        span Checkbox text
+
+                div.mt1
+                    label.radio
+                        input(type="radio" name="foo1")
+                        span.control-indicator
+                        span Checkbox text
+
+                    label.radio
+                        input(type="radio" name="foo1")
+                        span.control-indicator
+                        span Checkbox text
+
+            div.mt3 .

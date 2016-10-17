@@ -1,11 +1,1 @@
 @import "style/bootstrap/_bootstrap";
-@import "style/errors.common";
-@import "js/modules/home/home.scss";
-@import "style/forms";
-@import "style/modal";
-
-// Auth
-@import "js/modules/auth/login/auth.login";
-@import "js/modules/auth/signup/auth.signup";
-@import "js/modules/auth/password_reset/auth.password_reset";
-@import "js/modules/auth/activation/auth.activation";
