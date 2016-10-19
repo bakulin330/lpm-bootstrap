@@ -1,7 +1,7 @@
 .control {
     position: relative;
     padding-left: 1.5rem;
-    color: $color-slate;
+    color: $color-text;
     cursor: pointer;
     line-height: 1.5;
     @include no-select;
@@ -15,7 +15,7 @@
 
 .control-indicator {
     position: absolute;
-    top: .25rem;
+    top: .15rem;
     left: 0;
     display: block;
     width: 1rem;
@@ -24,16 +24,18 @@
     font-size: 65%;
     color: #eee;
     text-align: center;
-    background-color: #eee;
+    background-color: #fff;
     background-size: 50% 50%;
     background-position: center center;
     background-repeat: no-repeat;
     pointer-events: none;
+    border:1px solid $color-slate;
 }
 
 .control input:checked ~ .control-indicator {
     color: #fff;
-    background-color: $color-default;
+    background-color: $color-primary;
+    border:none;
 }
 
 // -----------

@@ -1,0 +1,107 @@
+$font-m: $base-font-size;
+
+// --------------
+$font-l: percentage($multiplier);
+$font-xl: percentage($multiplier * $multiplier);
+$font-xxl: percentage($multiplier * $multiplier * $multiplier);
+
+$font-s: percentage(1 / $multiplier);
+$font-xs: percentage(1 / $multiplier / $multiplier);
+// --------------
+
+body {
+    font-size: $base-font-size;
+    font-family: $base-font-family;
+    line-height: $base-line-height;
+    cursor: default;
+    color: $color-text;
+}
+
+.font-xxl {
+    font-size: $font-xxl;
+}
+
+.font-xl {
+    font-size: $font-xl;
+}
+
+.font-l {
+    font-size: $font-l;
+}
+
+.font-m {
+    font-size: $font-m;
+}
+
+.font-s {
+    font-size: $font-s;
+}
+
+.font-xs {
+    font-size: $font-xs;
+}
+
+a {
+    background-color: transparent;
+    transition: all .15s linear;
+    cursor: pointer;
+    color: $color-blue;
+    outline: none;
+
+    &:visited {
+        color: $color-blue;
+    }
+}
+
+.link-dark {
+    color: $color-text;
+}
+
+.link-light {
+    color: $color-text;
+}
+
+.link-negative {
+    color: $color-danger;
+}
+
+@media screen and (min-width: 768px) {
+    a {
+        &:hover {
+            color: $color-blue-dark;
+            text-decoration:underline;
+        }
+    }
+
+    .link-dark:hover {
+        color: $color-black;
+        text-decoration: underline;
+
+    }
+
+    .link-light:hover {
+        color: $color-black;
+        text-decoration: underline;
+    }
+
+    .link-negative:hover {
+        color: $color-danger-active;
+        text-decoration: underline;
+    }
+}
+
+.color-title {
+    color: $color-title;
+}
+
+.color-subtitle {
+    color: $color-subtitle;
+}
+
+.color-text {
+    color: $color-text;
+}
+
+.color-hint {
+    color: $color-hint;
+}

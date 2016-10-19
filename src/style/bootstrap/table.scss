@@ -6,6 +6,12 @@ table {
 .table {
     display: table;
     table-layout: fixed;
+    width: 100%;
+}
+
+.t-head {
+    color: $color-subtitle;
+    font-weight: bold;
 }
 
 .t-row {
@@ -17,15 +23,34 @@ table {
     vertical-align: top;
 }
 
-.table_vert-align-mid .t-cell {
+.vam .t-cell {
     vertical-align: middle;
 }
 
-.table_vert-align-bot .t-cell {
+.vab .t-cell {
     vertical-align: bottom;
 }
+.vat .t-cell {
+    vertical-align: top;
+}
 
-
-.table_cell-center .t-cell {
+.c-text .t-cell {
     text-align: center;
+}
+
+.table-bordered {
+    border: 1px solid $color-default;
+    .t-cell {
+        border-bottom: 1px solid $color-default;
+        border-right: 1px solid $color-default;
+        padding: 8px;
+        &:last-child {
+            border-right: none;
+        }
+    }
+    .t-row:last-child {
+        .t-cell {
+            border-bottom: none;
+        }
+    }
 }

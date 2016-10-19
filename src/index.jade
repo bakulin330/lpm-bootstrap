@@ -7,7 +7,11 @@ html(lang="ru", ng-app="app")
         meta(http-equiv="Content-Type" content="text/html;charset=UTF-8")
         link(href="https://fonts.googleapis.com/css?family=Open+Sans&subset=cyrillic" rel="stylesheet")
         link(href="a.css" rel="stylesheet")
-        script(type="text/javascript") function _err(e,i){console&&console.error(e.stack);}
+        script(type="text/javascript")
+            | function _err(e, i) {
+            | console && console.error(e.stack);
+            | }
+
         script(src="v.js" type="text/javascript")
         script(src="b.js" type="text/javascript")
     body(ng-controller="AppCtrl as main")
@@ -20,194 +24,417 @@ html(lang="ru", ng-app="app")
         noscript#nojs
             h1 To use App, please enable JavaScript.
 
-        h1 Home
         div(ng-bind="home.test")
         div
             a(ui-sref="errors-list") List
 
-        div(style="width:850px; margin:0 auto;")
-            div.table
-                div.t-row
-                    div.t-cell
-                        div.card.card_blue Blue #[br] #1FB6FF
+        div.clearfix(style="width:960px; margin:0 auto;")
+            ul.nav.nav-pills.nav-stacked.tabs
+                li.active
+                    a(href="#") Modal
+                li
+                    a(href="#") Dropdown
+                li
+                    a(href="#") Form
+                li
+                    a(href="#") Tooltip
+                li
+                    a(href="#") Tabs
+                li
+                    a(href="#") Buttons
+                li
+                    a(href="#") Typography
+                li
+                    a(href="#") Utilities
+                li
+                    a(href="#colors") Colors
+                li
+                    a(href="#colors") Grid
+            div.l-float.tab-content(style="width:810px; margin-left:250px;")
 
-            div(style="margin-top:30px")
-                div.font-card
-                    div.font-xxl Съешь ещё этих мягких французских булок, да выпей чаю
-                    div.font-xxl.mt1 The quick brown fox jumps over the lazy dog
-                    div.font-s.color-silver.mt1 XXL
+                div.lib-section
+                    div.color-title.font-xxl Grid
+                    div.table.table-bordered.mt3.c-text
+                        div.t-row
+                            div.t-cell.t-head col-s-*
+                            div.t-cell.t-head col-m-*
+                            div.t-cell.t-head col-l-*
+                            div.t-cell.t-head col-xl-*
+                        div.t-row
+                            div.t-cell <768px
+                            div.t-cell >768px
+                            div.t-cell >992px
+                            div.t-cell >1200px
 
-                div.font-card
-                    div.font-xl Съешь ещё этих мягких французских булок, да выпей чаю
-                    div.font-xl.mt1 The quick brown fox jumps over the lazy dog
-                    div.font-s.color-silver.mt1 XL
+                    div.row.show-grid.mt3
+                        div.col-s-6.col-m-4.col-l-3.col-xl-2
+                            div.ex-col col-s-6 #[br] col-m-4 #[br] col-l-3 #[br] col-xl-2
+                        div.col-s-6.col-m-4.col-l-3.col-xl-2
+                            div.ex-col col-s-6 #[br] col-m-4 #[br] col-l-3 #[br] col-xl-2
+                        div.col-s-6.col-m-4.col-l-3.col-xl-2
+                            div.ex-col col-s-6 #[br] col-m-4 #[br] col-l-3 #[br] col-xl-2
+                        div.col-s-6.col-m-4.col-l-3.col-xl-2
+                            div.ex-col col-s-6 #[br] col-m-4 #[br] col-l-3 #[br] col-xl-2
+                        div.col-s-6.col-m-4.col-l-3.col-xl-2
+                            div.ex-col col-s-6 #[br] col-m-4 #[br] col-l-3 #[br] col-xl-2
+                        div.col-s-6.col-m-4.col-l-3.col-xl-2
+                            div.ex-col col-s-6 #[br] col-m-4 #[br] col-l-3 #[br] col-xl-2
+                div.lib-section.mt5
+                    div.color-title.font-xxl Tabs
+                    div.row
+                        div.col-l-6
+                            div.color-subtitle.font-xl.mt2 Vertical
+                            ul.nav.nav-pills.nav-stacked.mt3
+                                li.active
+                                    a(href="#") Modal
+                                li
+                                    a(href="#") Dropdown
+                                li
+                                    a(href="#") Form
+                        div.col-l-6
+                            div.color-subtitle.font-xl.mt2 Horizontal
+                            div.color-subtitle.font-l.mt2 Common
+                            ul.nav.nav-tabs.mt3
+                                li.active
+                                    a(href="#") Modal
+                                li
+                                    a(href="#") Dropdown
+                                li
+                                    a(href="#") Form
 
-                div.font-card
-                    div.font-l Съешь ещё этих мягких французских булок, да выпей чаю
-                    div.font-l.mt1 The quick brown fox jumps over the lazy dog
-                    div.font-s.color-silver.mt1 L
+                            div.color-subtitle.font-l.mt2 Line
+                            ul.nav.nav-tabs.nav-tabs-line.mt2
+                                li.active
+                                    a(href="#") Modal
+                                li
+                                    a(href="#") Dropdown
+                                li
+                                    a(href="#") Form
 
-                div.font-card
-                    div.font-m Съешь ещё этих мягких французских булок, да выпей чаю
-                    div.font-m.mt1 The quick brown fox jumps over the lazy dog
-                    div.font-s.color-silver.mt1 M
+                div.lib-section.mt5
+                    div.color-title.font-xxl Modal
+                        div.row.c-text.mt3
+                            div.col-l-4
+                                button.btn.btn-m.btn-default.btn-ghost.btn-round Small
+                            div.col-l-4
+                                button.btn.btn-m.btn-default.btn-ghost.btn-round Medium
+                            div.col-l-4
+                                button.btn.btn-m.btn-default.btn-ghost.btn-round Large
 
-                div.font-card
-                    div.font-s Съешь ещё этих мягких французских булок, да выпей чаю
-                    div.font-s.mt1 The quick brown fox jumps over the lazy dog
-                    div.font-s.color-silver.mt1 S
+                div.lib-section.mt5
+                    div.color-title.font-xxl Dropdown
 
-                div.font-card
-                    div.font-xs Съешь ещё этих мягких французских булок, да выпей чаю
-                    div.font-xs.mt1 The quick brown fox jumps over the lazy dog
-                    div.font-s.color-silver.mt1 XS
+                div.lib-section.mt5
+                    div.color-title.font-xxl Tooltip & Popover
+                    div.color-subtitle.font-xl.mt3 Popover
+                    div.row.mt3.example
+                        div.col-l-3
+                            div.popover.top
+                                div.arrow
+                                div.popover-content popover top
+                        div.col-l-3
+                            div.popover.right
+                                div.arrow
+                                div.popover-content popover right
+                        div.col-l-3
+                            div.popover.bottom
+                                div.arrow
+                                div.popover-content popover bottom
+                        div.col-l-3
+                            div.popover.left
+                                div.arrow
+                                div.popover-content popover left
+
+                    div.color-subtitle.font-xl.mt3 Tooltip
+                    div.row.mt3.example
+                        div.col-l-3
+                            div.tooltip.top
+                                div.tooltip-arrow
+                                div.tooltip-inner tooltip top
+                        div.col-l-3
+                            div.tooltip.right
+                                div.tooltip-arrow
+                                div.tooltip-inner tooltip right
+                        div.col-l-3
+                            div.tooltip.bottom
+                                div.tooltip-arrow
+                                div.tooltip-inner tooltip bottom
+                        div.col-l-3
+                            div.tooltip.left
+                                div.tooltip-arrow
+                                div.tooltip-inner tooltip left
+
+                div.lib-section.mt5
+                    div.color-title.font-xxl Typography
+                    div.color-subtitle.font-xl.mt2 Font-size
+                    div.font-card.mt2
+                        div.font-xxl.color-title Съешь ещё этих мягких французских булок, да выпей чаю
+                        div.font-xxl.mt1.color-title The quick brown fox jumps over the lazy dog
+                        div.font-s.color-hint.mt1 XXL
+
+                    div.font-card
+                        div.font-xl.color-title Съешь ещё этих мягких французских булок, да выпей чаю
+                        div.font-xl.mt1.color-title The quick brown fox jumps over the lazy dog
+                        div.font-s.color-hint.mt1 XL
+
+                    div.font-card
+                        div.font-l.color-title Съешь ещё этих мягких французских булок, да выпей чаю
+                        div.font-l.mt1.color-title The quick brown fox jumps over the lazy dog
+                        div.font-s.color-hint.mt1 L
+
+                    div.font-card
+                        div.font-m.color-title Съешь ещё этих мягких французских булок, да выпей чаю
+                        div.font-m.mt1.color-title The quick brown fox jumps over the lazy dog
+                        div.font-s.color-hint.mt1 M
+
+                    div.font-card
+                        div.font-s.color-title Съешь ещё этих мягких французских булок, да выпей чаю
+                        div.font-s.mt1.color-title The quick brown fox jumps over the lazy dog
+                        div.font-s.color-hint.mt1 S
+
+                    div.font-card(style="border-bottom:1px solid #A3AFB7;")
+                        div.font-xs.color-title Съешь ещё этих мягких французских булок, да выпей чаю
+                        div.font-xs.mt1.color-title The quick brown fox jumps over the lazy dog
+                        div.font-s.color-hint.mt1 XS
+
+                    div.font-xl.mt3 Link
+                    div.mt2
+                        div Some #[a text and] link.
+                        div Some #[a(class="link-dark") text and] link.
+                        div Some #[a(class="link-light") text and] link.
+                        div Some #[a(class="link-negative") negative] link.
+                div.mt5.lib-section
+                    div.color-title.font-xxl Buttons
+                    div.color-title.font-xl.mt2 Size
+                    div.table.table_cell-center.mt2.tbl-btns
+                        div.t-row
+                            div.t-cell
+                                button.bg-default.btn-xl Кнопка
+                            div.t-cell
+                                button.bg-default.btn-l Кнопка
+                            div.t-cell
+                                button.bg-default.btn-m Кнопка
+                            div.t-cell
+                                button.bg-default.btn-s Кнопка
+                            div.t-cell
+                                button.bg-default.btn-xs Кнопка
+
+                        div.t-row
+                            div.t-cell
+                                div.font-s.color-hint XL Button
+                            div.t-cell
+                                div.font-s.color-hint L Button
+                            div.t-cell
+                                div.font-s.color-hint M Button
+                            div.t-cell
+                                div.font-s.color-hint S Button
+                            div.t-cell
+                                div.font-s.color-hint XS Button
+
+                    div.color-subtitle.font-xl.mt3 Variants
+                    div.mt2
+                        button.btn-m.btn-primary Primary
+                        button.btn-m.btn-success.ml2 Success
+                        button.btn-m.btn-info.ml2 Info
+                        button.btn-m.btn-warning.ml2 Warning
+                        button.btn-m.btn-danger.ml2 Danger
+
+                    div.color-subtitle.font-xl.mt3 Ghost
+                    div.mt3
+                        button.btn-m.btn-ghost.btn-default Ghost default
+                        button.btn-m.btn-ghost.btn-primary.ml2 Ghost primary
+                        button.btn-m.btn-ghost.btn-success.ml2 Ghost success
+                        button.btn-m.btn-ghost.btn-info.ml2.mr2 Ghost info
+                        button.btn-m.btn-ghost.btn-warning.mt2 Ghost warning
+                        button.btn-m.btn-ghost.btn-danger.mt2 Ghost danger
+
+                    div.color-subtitle.font-xl.mt2 Round
+                    div.mt3.tbl-btns.p2
+                        button.btn-xs.btn-ghost.btn-default.btn-round Кнопка
+                        button.btn-s.btn-ghost.btn-default.btn-round.ml2 Кнопка
+                        button.btn-m.btn-ghost.btn-default.btn-round.ml2 Кнопка
+                        button.btn-l.btn-ghost.btn-default.btn-round.ml2 Кнопка
+                        button.btn-xl.btn-ghost.btn-default.btn-round.ml2 Кнопка
+
+                    div.color-subtitle.font-xl.mt2 Disabled
+                    div.mt3
+                        button.btn-m.btn-disabled.btn-default Default
+                        button.btn-m.btn-disabled.btn-primary.ml2 Primary
+                        button.btn-m.btn-disabled.btn-success.ml2 Success
+                        button.btn-m.btn-disabled.btn-info.ml2 Info
+                        button.btn-m.btn-disabled.btn-warning.ml2 Warning
+                        button.btn-m.btn-disabled.btn-danger.ml2 Danger
+
+                    div.color-subtitle.font-xl.mt2 Loading
+                    div.mt3
+                        button.btn-m.btn-loading Loading
+
+                    div.color-subtitle.font-xl.mt2 Block
+                    div.mt3
+                        button.btn-m.btn-primary.btn-block Btn-block
+                    div.color-subtitle.font-xl.mt2 Group
+                    div.mt3
+                        div.btn-group
+                            button.btn.base-button.btn-m.btn-primary Default
+                            button.btn.btn-m.btn-primary Default
+                            button.btn.btn-m.btn-primary Default
+                        div.btn-group.ml3
+                            button.btn.base-button.btn-m.btn-primary.btn-round Default
+                            button.btn.btn-m.btn-primary.btn-round Default
+                            button.btn.btn-m.btn-primary.btn-round Default
 
 
-            div.table.table_cell-center.mt3#tbl-btns
-                div.t-row
-                    div.t-cell
-                        button.bg-default.btn-xl Кнопка
-                    div.t-cell
-                        button.bg-default.btn-l Кнопка
-                    div.t-cell
-                        button.bg-default.btn-m Кнопка
-                    div.t-cell
-                        button.bg-default.btn-s Кнопка
-                    div.t-cell
-                        button.bg-default.btn-xs Кнопка
 
-                div.t-row
-                    div.t-cell
-                        div.font-s.color-silver XL Button
-                    div.t-cell
-                        div.font-s.color-silver L Button
-                    div.t-cell
-                        div.font-s.color-silver M Button
-                    div.t-cell
-                        div.font-s.color-silver S Button
-                    div.t-cell
-                        div.font-s.color-silver XS Button
+                div.mt5.lib-section
+                    div.font-xxl.color-title Form
+                    div.font-xl.mt3.color-subtitle Input
+                    div.mt3
+                        div.table
+                            div.t-row
+                                div.t-cell
+                                    input.input-s(placeholder="Плейсхолдер")
+                                div.t-cell.pl1
+                                    button.btn-s.btn-primary Default
+
+                    div.mt3
+                        div.table
+                            div.t-row
+                                div.t-cell
+                                    input.input-m(placeholder="Плейсхолдер")
+                                div.t-cell.pl1
+                                    button.btn-m.btn-primary Default
+
+                    div.mt3
+                        div.table
+                            div.t-row
+                                div.t-cell
+                                    input.input-l(placeholder="Плейсхолдер")
+                                div.t-cell.pl1
+                                    button.btn-l.btn-primary Default
+
+                    div.mt3
+                        div.table
+                            div.t-row
+                                div.t-cell
+                                    input.input-xl(placeholder="Плейсхолдер")
+                                div.t-cell.pl1
+                                    button.btn-xl.btn-primary Default
+
+                    div.mt3
+                        div.table
+                            div.t-row
+                                div.t-cell
+                                    input.input-xl.input-disabled(value="Disabled input")
+                                div.t-cell.pl1
+                                    button.btn-xl.btn-disabled.btn-primary Disabled
+
+                    div.font-xl.mt3.color-subtitle Round input
+                    div.mt3
+                        input.input-m.input-round(placeholder="Плейсхолдер")
+                    div.mt3.form-group-round
+                        input.input.input-m(placeholder="Плейсхолдер")
+                        button.btn.btn-m.btn-primary Кнопка
+                    div.mt3.form-group-round
+                        input.input.input-l(placeholder="Плейсхолдер")
+                        button.btn.btn-l.btn-primary Кнопка
+                    div.mt3
+                        div.font-xl.color-subtitle Select
+                        div.mt3
+                            select.select-s
+                                option a
+                                option b
+                                option c
+                        div.mt3
+                            select.select-m
+                                option a
+                                option b
+                                option c
+                        div.mt3
+                            select.select-l
+                                option a
+                                option b
+                                option c
+                        div.mt3
+                            select.select-xl
+                                option a
+                                option b
+                                option c
+
+                    div.font-xl.mt3.color-subtitle Textarea
+
+                    div.mt2
+                        div.table.w-full
+                            div.t-row
+                                div.t-cell
+                                    textarea.textarea-s(rows="2")
+                                        | some text
+                                        | etxt
+                                div.t-cell.pl1
+                                    textarea.textarea-m(rows="2")
+                                        | some text
+                                        | etxt
+                                div.t-cell.pl1
+                                    textarea.textarea-l(rows="2")
+                                        | some text
+                                        | etxt
+                                div.t-cell.pl1
+                                    textarea.textarea-xl(rows="2")
+                                        | some text
+                                        | etxt
+
+                        textarea.textarea-s.mt1.textarea-disabled(rows="2")
+                            | some text
+                            | etxt
+
+                    div.font-xl.mt3.color-subtitle Checkbox & Radio
+
+                    div.mt3
+                        div
+                            label.checkbox
+                                input(type="checkbox")
+                                span.control-indicator
+                                span Checkbox text
+
+                        div.mt1
+                            label.radio
+                                input(type="radio" name="foo1")
+                                span.control-indicator
+                                span Checkbox text
+
+                            label.radio
+                                input(type="radio" name="foo1")
+                                span.control-indicator
+                                span Checkbox text
+
+                div.mt5.lib-section.mb5
+                    div.font-xxl.color-title Colors
+                        a(name="colors")
+                    div.clearfix.mt3
+
+                            div.l-float
+                                div.card.card-primary(style"margin:0;") #62a8ea
+                                div.c-text.mt1 Primary
+                            div.l-float.ml2
+                                div.card.card-success #3aa99e
+                                div.c-text.mt1 Success
+                            div.l-float.ml2
+                                div.card.card-danger #f96868
+                                div.c-text.mt1 Danger
+                            div.l-float.ml2
+                                div.card.card-gray(style="color:#76838F") #E4EAEC
+                                div.c-text.mt1 Default
+                            div.l-float.ml2
+                                div.card.card-dark-gray #37474F
+                                div.c-text.mt1 Title
+                            div.l-float.ml2
+                                div.card.card-warning #f2a654
+                                div.c-text.mt1 Warning
+                            div.l-float.ml2
+                                div.card.card-info #57C7D4
+                                div.c-text.mt1 Info
+                            div.l-float.ml2
+                                div.card.card-light-gray #76838F
+                                div.c-text.mt1 Text
 
 
-            div.mt3
-                button.btn-m.bg-default Default
-                button.btn-m.bg-positive.ml2 Позитив
-                button.btn-m.bg-negative.ml2 Негатив
 
-            div.mt3
-                button.btn-m.btn-ghost.bg-default-hover Ghost
-                button.btn-m.btn-ghost.bg-positive-hover.ml2 Ghost positive
-                button.btn-m.btn-ghost.bg-negative-hover.ml2 Ghost negative
-
-            div.mt3.bg-snow
-                button.btn-m.btn-outlined.bg-white.bg-default-hover Outlined
-                button.btn-m.btn-disabled.ml2 Disabled
-                button.btn-m.btn-loading.ml2 Loading
-
-            div.font-xxl.mt3 Text input
-
-            div.mt1
-                div.table
-                    div.t-row
-                        div.t-cell
-                            input.input-s(placeholder="Плейсхолдер")
-                        div.t-cell.pl1
-                            button.btn-s.bg-default Default
-
-            div.mt3
-                div.table
-                    div.t-row
-                        div.t-cell
-                            input.input-m(placeholder="Плейсхолдер")
-                        div.t-cell.pl1
-                            button.btn-m.bg-default Default
-
-            div.mt3
-                div.table
-                    div.t-row
-                        div.t-cell
-                            input.input-l(placeholder="Плейсхолдер")
-                        div.t-cell.pl1
-                            button.btn-l.bg-default Default
-
-            div.mt3
-                div.table
-                    div.t-row
-                        div.t-cell
-                            input.input-xl(placeholder="Плейсхолдер")
-                        div.t-cell.pl1
-                            button.btn-xl.bg-default Default
-
-            div.mt3
-                div.table
-                    div.t-row
-                        div.t-cell
-                            input.input-xl.input-disabled(value="Disabled input")
-                        div.t-cell.pl1
-                            button.btn-xl.bg-default.btn-disabled Disabled
-
-            div.font-xxl.mt3 Textarea
-
-            div.mt1
-                div.table.w-full
-                    div.t-row
-                        div.t-cell
-                            textarea.textarea-s(rows="2")
-                                | some text
-                                | etxt
-                        div.t-cell.pl1
-                            textarea.textarea-m(rows="2")
-                                | some text
-                                | etxt
-                        div.t-cell.pl1
-                            textarea.textarea-l(rows="2")
-                                | some text
-                                | etxt
-                        div.t-cell.pl1
-                            textarea.textarea-xl(rows="2")
-                                | some text
-                                | etxt
-
-                    div.t-row
-                        div.t-cell S
-                        div.t-cell M
-                        div.t-cell L
-                        div.t-cell XL
-
-
-                textarea.textarea-s.mt1.textarea-disabled(rows="2")
-                    | some text
-                    | etxt
-
-
-
-
-
-
-            div.font-xxl.mt3 Link
-
-            div.mt1
-                div Some #[a text and] link.
-                div Some #[a(class="link-dark") text and] link.
-                div Some #[a(class="link-light") text and] link.
-                div Some #[a(class="link-negative") negative] link.
-
-            div.mt3
-                div
-                    label.checkbox
-                        input(type="checkbox")
-                        span.control-indicator
-                        span Checkbox text
-
-                div.mt1
-                    label.radio
-                        input(type="radio" name="foo1")
-                        span.control-indicator
-                        span Checkbox text
-
-                    label.radio
-                        input(type="radio" name="foo1")
-                        span.control-indicator
-                        span Checkbox text
-
-            div.mt3 .

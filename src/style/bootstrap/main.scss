@@ -28,18 +28,3 @@ body {
     font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif;
 }
 
-.w-full {
-    width: 100%;
-}
-
-.clearfix {
-    @include clearfix;
-}
-
-.l-float {
-    float: left;
-}
-
-.r-float {
-    float: right;
-}

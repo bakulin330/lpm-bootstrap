@@ -7,15 +7,15 @@
 }
 
 .bg-default, .bg-default-hover:hover {
-    background: $color-default;
+    background: $color-primary;
 }
 
 .bg-positive, .bg-positive-hover:hover {
-    background: $color-positive;
+    background: $color-success;
 }
 
 .bg-negative, .bg-negative-hover:hover {
-    background: $color-negative;
+    background: $color-danger;
 }
 
 .bg-snow {

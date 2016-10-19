@@ -1,21 +1,58 @@
+body {
+    background: #EEE;
+}
+
 h1 {
     font-size: 40px;
 }
 
 .card {
-    padding: $step;
+    width: 70px;
+    height: 70px;
+    color: #FFF;
+    text-align: center;
+    padding-top: 27px;
     @include border-radius($base-border-radius);
     display: inline-block;
 }
-.card_blue {
-    background: $color-blue;
+
+.card-primary {
+    background: $color-primary;
+}
+
+.card-success {
+    background: $color-success;
+}
+
+.card-danger {
+    background: $color-danger;
+}
+
+.card-gray {
+    background: $color-default;
+}
+
+.card-dark-gray {
+    background: $color-title;
+}
+
+.card-warning {
+    background: $color-warning;
+}
+
+.card-info {
+    background: $color-info;
+}
+
+.card-light-gray {
+    background: $color-smoke;
 }
 
 .font-card {
     padding: 2*$step;
-    border: 1px solid $color-dark-smoke;
+    border: 1px solid $color-gray;
     border-bottom: none;
-    background: #fff;
+    background: #FFF;
 }
 
 .font-card:first-child {
@@ -24,15 +61,43 @@ h1 {
 
 .font-card:last-child {
     @include border-bottom-radius($base-border-radius);
-    border-bottom: 1px solid $color-dark-smoke;
+    border-bottom: 1px solid $color-gray;
 }
 
-#tbl-btns {
-    border: 1px solid $color-dark-smoke;
+.tbl-btns {
+    border: 1px solid $color-gray;
     @include border-radius($base-border-radius);
-    background: #fff;
+    background: #FFF;
 }
 
-#tbl-btns .t-cell {
+.tbl-btns .t-cell {
     padding: 2*$step;
+}
+
+.tabs {
+    float: left;
+    width: 220px;
+    position: fixed;
+}
+
+.lib-section {
+    padding: 30px 20px;
+    background: #FFF;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13), 0 1px 3px rgba(0, 0, 0, 0.13);
+}
+.show-grid .ex-col{
+    background:#e4eaec;
+    padding:10px 0;
+    text-align:center;
+}
+.example{
+    & .popover,
+    & .tooltip{
+        display:block;
+        position:relative;
+        opacity:1;
+        margin:0;
+    }
+
 }

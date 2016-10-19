@@ -1,27 +1,54 @@
-// brand colors
 $color-blue: #1FB6FF;
 $color-blue-light: #85D7FF;
 $color-blue-dark: #009EEB;
 
-// grey colors
-$color-black: #1F2D3D;
-$color-steel: #273444;
-$color-slate: #3C4858;
-$color-silver: #8492A6;
+//gray colors
+$color-black: #37474F;
+$color-steel: #526069;
+$color-slate: #CCC;
+$color-silver: #E4EAEC;
 
-$color-smoke: #E0E6ED;
-$color-dark-smoke: #D3DCE6;
+$color-smoke: #76838F;
+$color-gray: #A3AFB7;
 $color-extra-dark-smoke: #C0CCDA;
 
-$color-snow: #F9FAFC;
-$color-dark-snow: #EFF2F7;
+$color-snow: #FAFAFA;
+$color-dark-snow: #F5F5F5;
 $color-extra-dark-snow: #E5E9F2;
 
-// UI colors
-$color-default: #1FB6FF;
-$color-positive: #13CE66;
-$color-negative: #FF4949;
-$color-warning: #FFC82C;
+//Text-colors
+$color-title: $color-black;
+$color-subtitle: $color-steel;
+$color-text: $color-smoke;
+$color-hint: $color-gray;
+
+//Interface colors
+$color-default: $color-silver;
+$color-gray-light: $color-slate;
+$color-gray-bg: $color-dark-snow;
+$color-light-gray-bg: $color-snow;
+
+$color-primary: #62a8ea;
+$color-success: #3aa99e;
+$color-danger: #f96868;
+$color-warning: #f2a654;
+$color-info: #57C7D4;
+
+$color-primary-hover: #89BCEB;
+$color-primary-active: #4E97D9;
+$color-primary-disabled: #A2CAEE;
+$color-success-hover: #5CD29D;
+$color-success-active: #36AB7A;
+$color-success-disabled: #7DD3AE;
+$color-info-hover: #77D6E1;
+$color-info-active: #47B8C6;
+$color-info-disabled: #9AE1E9;
+$color-warning-hover: #F4B066;
+$color-warning-active: #E79857;
+$color-warning-disabled: #F6BE80;
+$color-danger-hover: #FA7A7A;
+$color-danger-active: #E9595B;
+$color-danger-disabled: #FA9898;
 
 // -------------------
 

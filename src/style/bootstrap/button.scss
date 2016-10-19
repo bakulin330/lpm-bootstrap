@@ -1,16 +1,20 @@
 $base-button-height: 4*$step;
 $base-button-padding: ($base-button-height / 2);
 $base-btn-shadow: 2px;
-$btn-base-box-shadow: inset 0 -2px 0 rgba(31,45,61,0.3); //, 0 1px 2px rgba(0,0,0,.2);
-$btn-ghost-box-shadow: $color-dark-smoke 0px 0px 0px 1px inset;
+$btn-base-box-shadow: inset 0 -2px 0 rgba(31, 45, 61, 0.3);
+//, 0 1px 2px rgba(0,0,0,.2);
+$btn-ghost-box-shadow: $color-extra-dark-smoke 0px 0px 0px 1px inset;
+$btn-round-radius: 1000px;
+
+
 
 button::-moz-focus-inner, input[type=submit]::-moz-focus-inner, input[type=button]::-moz-focus-inner {
     padding: 0;
     border: 0 none;
 }
 
-.base-button {
-    color: #fff;
+.btn {
+    color: #FFF;
     border: 0;
     @include border-radius($base-border-radius);
     cursor: pointer;
@@ -24,7 +28,7 @@ button::-moz-focus-inner, input[type=submit]::-moz-focus-inner, input[type=butto
     min-width: 40px;
     font-family: $base-font-family;
     position: relative;
-    text-shadow: 0 1px rgba(0,0,0,.1);
+    text-shadow: 0 1px rgba(0, 0, 0, .1);
 
     &:hover {
         @include box-shadow($btn-base-box-shadow);
@@ -32,14 +36,14 @@ button::-moz-focus-inner, input[type=submit]::-moz-focus-inner, input[type=butto
 
     &:active {
         top: 1px;
-        box-shadow: inset 0 -1px 0 rgba(31,45,61,0.3);
+        box-shadow: inset 0 -1px 0 rgba(31, 45, 61, 0.3);
     }
 }
 
 // -------------
 
 .btn-m {
-    @extend .base-button;
+    @extend .btn;
     font-size: $font-m;
     height: $base-button-height;
     line-height: $base-button-height;
@@ -48,7 +52,7 @@ button::-moz-focus-inner, input[type=submit]::-moz-focus-inner, input[type=butto
 
 $btm-s-height: round(($base-button-height / $btn-multiplier)/2)*2;
 .btn-s {
-    @extend .base-button;
+    @extend .btn;
     font-size: $font-s;
     height: $btm-s-height;
     line-height: $btm-s-height;
@@ -57,7 +61,7 @@ $btm-s-height: round(($base-button-height / $btn-multiplier)/2)*2;
 
 $btm-xs-height: round(($base-button-height / $btn-multiplier / $btn-multiplier)/2)*2;
 .btn-xs {
-    @extend .base-button;
+    @extend .btn;
     font-size: $font-xs;
     height: $btm-xs-height;
     line-height: $btm-xs-height;
@@ -66,7 +70,7 @@ $btm-xs-height: round(($base-button-height / $btn-multiplier / $btn-multiplier)/
 
 $btm-l-height: round(($base-button-height * $btn-multiplier)/2)*2;
 .btn-l {
-    @extend .base-button;
+    @extend .btn;
     font-size: $font-l;
     height: $btm-l-height;
     line-height: $btm-l-height;
@@ -75,59 +79,237 @@ $btm-l-height: round(($base-button-height * $btn-multiplier)/2)*2;
 
 $btm-xl-height: round(($base-button-height * $btn-multiplier * $btn-multiplier)/2)*2;
 .btn-xl {
-    @extend .base-button;
+    @extend .btn;
     font-size: $font-xl;
     height: $btm-xl-height;
     line-height: $btm-xl-height;
     padding: 0 ($btm-xl-height / 2);
-//    box-shadow: inset 0 -3px 0 rgba(31,45,61,0.3);
+    //    box-shadow: inset 0 -3px 0 rgba(31,45,61,0.3);
 }
 
 // -------------
 
 .btn-block {
     display: block;
+    width: 100%;
+}
+
+.btn-icon {
+    padding: $step;
+    line-height: $base-line-height;
+}
+
+//.btn-outlined {
+//    color: $color-slate;
+//    @include box-shadow($btn-ghost-box-shadow);
+//    text-shadow: none;
+//
+//    &:hover {
+//        color: #FFF;
+//    }
+//}
+
+.btn-disabled {
+    top: 0 !important;
+    cursor: default;
+    background: $color-snow;
+    color: $color-hint;
+    text-shadow: none;
+    &.btn-primary,
+    &.btn-primary:hover,
+    &.btn-primary:active,
+    &.btn-primary.active,
+    &.btn-primary:active:hover,
+    &.btn-primary.active:hover {
+        background: $color-primary-disabled;
+        @include box-shadow(none);
+
+    }
+    &.btn-success,
+    &.btn-success:hover,
+    &.btn-success:active,
+    &.btn-success.active,
+    &.btn-success:active:hover,
+    &.btn-success.active:hover {
+        background: $color-success-disabled;
+        @include box-shadow(none);
+    }
+    &.btn-info,
+    &.btn-info:hover,
+    &.btn-info:active,
+    &.btn-info.active,
+    &.btn-info:active:hover,
+    &.btn-info.active:hover {
+        background: $color-info-disabled;
+        @include box-shadow(none);
+    }
+    &.btn-warning,
+    &.btn-warning:hover,
+    &.btn-warning:active,
+    &.btn-warning.active,
+    &.btn-warning:active:hover,
+    &.btn-warning.active:hover {
+        @include box-shadow(none);
+        background: $color-warning-disabled;
+    }
+    &.btn-danger,
+    &.btn-danger:hover,
+    &.btn-danger:active,
+    &.btn-danger.active,
+    &.btn-danger:active:hover,
+    &.btn-danger.active:hover {
+        background: $color-danger-disabled;
+        @include box-shadow(none);
+    }
+    &.btn-default,
+    &.btn-default:hover,
+    &.btn-default:active,
+    &.btn-default.active,
+    &.btn-default:active:hover,
+    &.btn-default.active:hover {
+        background: $color-snow;
+        @include box-shadow($btn-ghost-box-shadow);
+    }
+
+}
+
+.btn-loading {
+    @extend .btn-disabled;
+    //    @include box-shadow($color-extra-dark-smoke 0px 0px 0px 1px inset);
+    animation: loading-stripes 2s infinite linear;
+    background-image: linear-gradient(-45deg, rgba(150, 150, 150, 0.2) 25%, transparent 25%, transparent 50%, rgba(150, 150, 150, 0.2) 50%, rgba(150, 150, 150, 0.2) 75%, transparent 75%, transparent) !important;
+    //background-image: url('data:image/svg+xml;base64,str2base64([code]<svg fill="#ccc" width="50" height="50" viewbox="0 0 40 40"><path d="M 20,0 40,0 0,40 0,20"/></svg>[/code])');
+    background-size: 50px 50px !important;
+    &:hover {
+        @include box-shadow(none);
+    }
+}
+
+.btn-primary {
+    background: $color-primary;
+    color: #FFF;
+    &:hover {
+        background: $color-primary-hover;
+    }
+    &:active,
+    &.active,
+    &.active:hover,
+    &:active:hover {
+        background: $color-primary-active;
+    }
+}
+
+.btn-success {
+    background: $color-success;
+    color: #FFF;
+    &:hover {
+        background: $color-success-hover;
+    }
+    &:active,
+    &.active,
+    &.active:hover,
+    &:active:hover {
+        background: $color-success-active;
+    }
+}
+
+.btn-info {
+    background: $color-info;
+    color: #FFF;
+    &:hover {
+        background: $color-info-hover;
+    }
+    &:active,
+    &.active,
+    &.active:hover,
+    &:active:hover {
+        background: $color-info-active;
+    }
+}
+
+.btn-warning {
+    background: $color-warning;
+    color: #FFF;
+    &:hover {
+        background: $color-warning-hover;
+    }
+    &:active,
+    &.active,
+    &.active:hover,
+    &:active:hover {
+        background: $color-warning-active;
+    }
+}
+
+.btn-danger {
+    background: $color-danger;
+    color: #FFF;
+    &:hover {
+        background: $color-danger-hover;
+    }
+    &:active,
+    &.active,
+    &.active:hover,
+    &:active:hover {
+        background: $color-danger-active;
+    }
 }
 
 .btn-ghost {
-    color: $color-slate;
+    color: $color-text;
     background: transparent;
     @include box-shadow($btn-ghost-box-shadow);
     text-shadow: none;
 
     &:hover {
-        color: #fff;
+        color: #FFF;
     }
 
     &:visited {
         background: transparent;
     }
-}
-
-.btn-outlined {
-    color: $color-slate;
-    @include box-shadow($btn-ghost-box-shadow);
-    text-shadow: none;
-
-    &:hover {
-        color: #fff;
+    &.btn-primary:hover {
+        background: $color-primary;
+    }
+    &.btn-success:hover {
+        background: $color-success;
+    }
+    &.btn-info:hover {
+        background: $color-info;
+    }
+    &.btn-warning:hover {
+        background: $color-warning;
+    }
+    &.btn-danger:hover {
+        background: $color-danger;
+    }
+    &.btn-default:hover {
+        background: $color-dark-snow;
+        color: $color-text;
+        @include box-shadow($btn-ghost-box-shadow);
     }
 }
 
-.btn-disabled {
-    top: 0 !important;
-    cursor: default;
-    background: $color-snow !important;
-    color: $color-silver;
-    @include box-shadow($btn-ghost-box-shadow !important);
-    text-shadow: none;
+.btn-round {
+    @include border-radius($btn-round-radius);
 }
 
-.btn-loading {
-    @extend .btn-disabled;
-//    @include box-shadow($color-extra-dark-smoke 0px 0px 0px 1px inset);
-    animation: loading-stripes 2s infinite linear;
-    background-image: linear-gradient(-45deg, rgba(150, 150, 150, 0.2) 25%, transparent 25%, transparent 50%, rgba(150, 150, 150, 0.2) 50%, rgba(150, 150, 150, 0.2) 75%, transparent 75%, transparent) !important;
-    //background-image: url('data:image/svg+xml;base64,str2base64([code]<svg fill="#ccc" width="50" height="50" viewbox="0 0 40 40"><path d="M 20,0 40,0 0,40 0,20"/></svg>[/code])');
-    background-size: 50px 50px !important;
+.btn-group {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    & > .btn:first-child {
+        margin-left: 0;
+    }
+    & > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+        @include border-right-radius(0);
+        border-left:0;
+    }
+    & > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+        @include border-radius(0);
+    }
+    & > .btn:last-child:not(:first-child),  & > .dropdown-toggle:not(:first-child) {
+        @include border-left-radius(0);
+        border-right:0;
+    }
 }
