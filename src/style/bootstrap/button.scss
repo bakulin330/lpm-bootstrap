@@ -29,9 +29,10 @@ button::-moz-focus-inner, input[type=submit]::-moz-focus-inner, input[type=butto
     font-family: $base-font-family;
     position: relative;
     text-shadow: 0 1px rgba(0, 0, 0, .1);
+    @include box-shadow($btn-base-box-shadow);
 
     &:hover {
-        @include box-shadow($btn-base-box-shadow);
+
     }
 
     &:active {
@@ -190,12 +191,14 @@ $btm-xl-height: round(($base-button-height * $btn-multiplier * $btn-multiplier)/
     color: #FFF;
     &:hover {
         background: $color-primary-hover;
+        color: #FFF;
     }
     &:active,
     &.active,
     &.active:hover,
     &:active:hover {
         background: $color-primary-active;
+        color: #FFF;
     }
 }
 
@@ -204,12 +207,14 @@ $btm-xl-height: round(($base-button-height * $btn-multiplier * $btn-multiplier)/
     color: #FFF;
     &:hover {
         background: $color-success-hover;
+        color: #FFF;
     }
     &:active,
     &.active,
     &.active:hover,
     &:active:hover {
         background: $color-success-active;
+        color: #FFF;
     }
 }
 
@@ -218,12 +223,14 @@ $btm-xl-height: round(($base-button-height * $btn-multiplier * $btn-multiplier)/
     color: #FFF;
     &:hover {
         background: $color-info-hover;
+        color: #FFF;
     }
     &:active,
     &.active,
     &.active:hover,
     &:active:hover {
         background: $color-info-active;
+        color: #FFF;
     }
 }
 
@@ -232,12 +239,14 @@ $btm-xl-height: round(($base-button-height * $btn-multiplier * $btn-multiplier)/
     color: #FFF;
     &:hover {
         background: $color-warning-hover;
+        color: #FFF;
     }
     &:active,
     &.active,
     &.active:hover,
     &:active:hover {
         background: $color-warning-active;
+        color: #FFF;
     }
 }
 
@@ -246,12 +255,44 @@ $btm-xl-height: round(($base-button-height * $btn-multiplier * $btn-multiplier)/
     color: #FFF;
     &:hover {
         background: $color-danger-hover;
+        color: #FFF;
     }
     &:active,
     &.active,
     &.active:hover,
     &:active:hover {
         background: $color-danger-active;
+        color: #FFF;
+    }
+}
+.btn-link {
+    background: transparent;
+    color: $color-blue;
+    @include box-shadow(none);
+    &:hover {
+        background: transparent;
+        color: $color-blue-dark;
+        @include box-shadow(none);
+    }
+    &:active,
+    &.active,
+    &.active:hover,
+    &:active:hover {
+    }
+}
+.btn-link-text {
+    background: transparent;
+    color: $color-text;
+    @include box-shadow(none);
+    &:hover {
+        background: transparent;
+        color: $color-subtitle;
+        @include box-shadow(none);
+    }
+    &:active,
+    &.active,
+    &.active:hover,
+    &:active:hover {
     }
 }
 
@@ -268,22 +309,36 @@ $btm-xl-height: round(($base-button-height * $btn-multiplier * $btn-multiplier)/
     &:visited {
         background: transparent;
     }
-    &.btn-primary:hover {
+    &.btn-primary:hover,
+    &.btn-primary:active,
+    &.btn-primary.active
+    {
         background: $color-primary;
     }
-    &.btn-success:hover {
+    &.btn-success:hover,
+    &.btn-success:active,
+    &.btn-success.active{
         background: $color-success;
     }
-    &.btn-info:hover {
+    &.btn-info:hover,
+    &.btn-info:active,
+    &.btn-info.active{
         background: $color-info;
     }
-    &.btn-warning:hover {
+    &.btn-warning:hover,
+    &.btn-warning:active,
+    &.btn-warning.active{
         background: $color-warning;
     }
-    &.btn-danger:hover {
+    &.btn-danger:hover,
+    &.btn-danger:active,
+    &.btn-danger.active{
         background: $color-danger;
     }
-    &.btn-default:hover {
+    &.btn-default:hover,
+    &.btn-default:active,
+    &.btn-default.active
+    {
         background: $color-dark-snow;
         color: $color-text;
         @include box-shadow($btn-ghost-box-shadow);

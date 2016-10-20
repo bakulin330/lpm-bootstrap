@@ -128,27 +128,122 @@ $input-xl-padding: round($input-xl-height * $input-padding-miltiplier);
         @include border-right-radius(1000px);
     }
 }
-select{
+
+select {
     @extend .input;
-    &.select-s{
+    &.select-s {
         font-size: $font-s;
         height: $input-s-height;
         padding: 0 $input-s-padding;
     }
-    &.select-m{
+    &.select-m {
         font-size: $font-m;
         height: $base-input-height;
         padding: 0 $input-m-padding;
     }
-    &.select-l{
+    &.select-l {
         font-size: $font-l;
         height: $input-l-height;
         padding: 0 $input-l-padding;
     }
-    &.select-xl{
+    &.select-xl {
         font-size: $font-xl;
         height: $input-xl-height;
         padding: 0 $input-xl-padding;
     }
 }
 
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 24px;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    vertical-align: middle;
+    cursor: pointer;
+    @include no-select;
+    background-color: #FFF;
+    -webkit-background-clip: content-box;
+    background-clip: content-box;
+    border: 1px solid $color-default;
+    @include border-radius(20px);
+    &.disabled{
+        @include opacity(.5);
+        cursor:default;
+    }
+    &.mini {
+        width: 39px;
+        height: 18px;
+        &:after{
+            width: 18px;
+            height: 18px;
+        }
+    }
+    &.on {
+        border-color: $color-primary;
+        @include box-shadow($color-primary 0 0 0 13px inset);
+        transition: border 0.4s, box-shadow 0.4s, background-color 1.2s;
+        background-color: $color-primary;
+        background-image: none;
+        &:after {
+            left: 21px;
+            transition: background-color 0.4s, left 0.2s;
+            background-color: #FFF;
+        }
+    }
+    &.off {
+        border-color: rgb(223, 223, 223);
+        box-shadow: rgb(223, 223, 223) 0 0 0 0 inset;
+        transition: border 0.4s, box-shadow 0.4s;
+        background-color: #FFF;
+        background-image: none;
+        &:after {
+            left: 0;
+            transition: background-color 0.4s, left 0.2s;
+        }
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 24px;
+        height: 24px;
+        background: #FFF;
+        border-radius: 100%;
+        -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+    }
+}
+.range{
+    position: relative;
+    cursor: pointer;
+    .range-bar {
+        height: 4px;
+        background-color: #f3f7f9;
+    }
+    .range-pointer {
+        position: absolute;
+        top: -3px;
+        left: 60%;
+        z-index: 2;
+        width: 10px;
+        height: 10px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        background-color: #fff;
+        border: 1px solid $color-default;
+        @include border-radius(50%);
+        @include transform(translate(-50%,0));
+    }
+    .range-selected {
+        position: absolute;
+        top: 0;
+        width: 60%;
+        height: 4px;
+        overflow: hidden;
+        background-color: $color-primary;
+    }
+}

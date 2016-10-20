@@ -1,0 +1,111 @@
+#wind-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 9991;
+}
+
+#wind_container.wind-container-white {
+    background: rgba(255, 255, 255, 0);
+}
+
+.wind-wrap {
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+
+}
+
+.wind-wrap-white {
+    background: rgba(255, 255, 255, 0);
+}
+
+.wind {
+    margin: 40px auto;
+    background: #FFF;
+    @include border-radius(4px);
+    @include box-shadow(0 3px 30px rgba(0, 0, 0, .5));
+    width: 700px;
+    &.wind-s{
+        width: 400px;
+    }
+    &.wind-m{
+        width: 700px;
+    }
+    &.wind-l{
+        width: 900px;
+    }
+    &.wind-dialog{
+        & .wind-body{
+            @include border-radius(4px);
+            text-align:center;
+        }
+        & .wind-close{
+            top: 25px;
+            right: 15px;
+        }
+    }
+    &.hidden {
+        display: none;
+    }
+    & .wind-header {
+        padding: 20px 20px;
+        background: $color-dark-snow;
+        @include border-top-radius(4px);
+        font-size: $font-l;
+        color: $color-title;
+        text-align: center;
+        border-bottom: 1px solid $color-default;
+        line-height: 1.2;
+        position: relative;
+    }
+    & .wind-close {
+        display: block;
+        padding: 8px;
+        position: absolute;
+        cursor: pointer;
+        top: 50%;
+        right: 20px;
+        margin-top: -15px;
+        @include border-radius(50%);
+        &:hover{
+            background:#eee;
+        }
+        & > div {
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAALVBMVEUAAAA3SU83R045R1U3SFA3R1A2R089SVU3Rk8zTU03R083R042Q1E3R083R08Gf0yjAAAADnRSTlMAKrYSvc3OFdIU0dATz5UJOWkAAABkSURBVHgBhdJLDoAgDAbhH4qID3v/41qT7iaNLudLUGnVugmP9abhG8SmD+3Lp6GvQ5ToZ/QUdEj065Yg2SHZIdGf6JCvB1NmHghhJ/wfxZfXn8sfRIfwEsXOcUCq0dbLUK3PC6MfBoUe3cfsAAAAAElFTkSuQmCC);
+            width: 14px;
+            height: 14px;
+            background-size: contain;
+            @include opacity(.7);
+            background-repeat: no-repeat;
+        }
+        &:hover > div {
+            @include opacity(1);
+        }
+
+    }
+    & .wind-body {
+        padding: 30px;
+        position:relative;
+    }
+    & .wind-footer {
+        padding: 15px 30px;
+        margin-bottom: 0;
+        background:$color-dark-snow;
+        border-top: 1px solid $color-default;
+        @include border-bottom-radius(4px);
+    }
+
+}
+
+html.wind-opened{
+    overflow: hidden;
+}
+
+
