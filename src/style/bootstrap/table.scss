@@ -1,13 +1,13 @@
 table {
     border-collapse: collapse;
     border-spacing: 0;
+    display: table;
+    width: 100%;
+    th, td {
+        text-align: left;
+    }
 }
 
-.table {
-    display: table;
-    //table-layout: fixed;
-    width: 100%;
-}
 
 .t-head {
     color: $color-subtitle;
@@ -53,4 +53,24 @@ table {
             border-bottom: none;
         }
     }
+}
+.new_css .table > tbody > tr > td,
+.new_css .table > thead > tr > th {
+    padding: 8px;
+    line-height: 1.57142857;
+    vertical-align: top;
+    border-top: 1px solid #E4EAEC;
+}
+table.general > tr > td:first-child,
+table.general > tbody > tr > td:first-child,
+table.general > tr > th:first-child div,
+table.general > thead > tr > th:first-child div {
+    padding-left: 15px;
+}
+table.general.vam > tr > td, table.general.vam > tbody > tr > td {
+    vertical-align: middle;
+}
+.new_css .table > thead:first-child > tr:first-child > td, .new_css .table > thead:first-child > tr:first-child > th {
+    border-top: 0;
+    font-weight: 600;
 }

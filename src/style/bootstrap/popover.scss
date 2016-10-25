@@ -16,6 +16,11 @@ $tooltip-bg: rgba(0, 0, 0, 0.8);
     background-clip: padding-box;
     font-size:12px;
 
+    .popover-title{
+        padding:3px 13px;
+        font-size:$font-l;
+
+    }
     &.top {
         margin-top: -10px;
         & .arrow {
@@ -105,7 +110,7 @@ $tooltip-bg: rgba(0, 0, 0, 0.8);
 }
 
 .popover-content {
-    padding: 9px 14px;
+    padding: 9px 14px 15px;
 }
 
 .tooltip {

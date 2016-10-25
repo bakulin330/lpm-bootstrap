@@ -1,6 +1,46 @@
 .container1, #container1, #cfg_container1 {
     margin-top: 100px;
 }
+
+.adm_container {
+    width: 960px;
+}
+
+.bs_block_title.no_brd {
+    border-bottom: 0;
+}
+
+.blk_basic_tabs {
+    height: 40px
+
+}
+
+.blk_basic_tabs {
+
+    a {
+        display: block;
+        float: left;
+        border-bottom: 0;
+        text-decoration: none;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        border: none;
+        background: transparent;
+        box-shadow: none;
+        color: #76838F;
+        font-size: 14px;
+        margin-left: 0;
+        padding: 10px 20px;
+        &.active {
+            background: #FFF;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            color: #76838F;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13), 0 1px 3px rgba(0, 0, 0, 0.13);
+        }
+    }
+}
+
 .row {
     @include clearfix();
     margin-right: -15px;
