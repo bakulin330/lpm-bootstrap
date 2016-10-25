@@ -1,0 +1,34 @@
+.alert {
+    padding: 15px;
+    margin-bottom: 22px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.alert-primary{
+    color: $color-primary;
+    background-color: rgba(232,241,248,.8);
+    border-color: #e8f1f8;
+}
+.alert-info {
+    color: $color-info;
+    background-color: rgba(236,249,250,.8);
+    border-color: #ecf9fa;
+}
+.alert-success {
+    color: $color-success;
+    background-color: rgba(231,250,242,.8);
+    border-color: #b2e8d1;
+}
+.alert-danger {
+    color: $color-danger;
+    background-color: rgba(255,234,234,.8);
+    border-color: #ffeaea;
+}
+.alert-warning {
+    color: $color-warning;
+    background-color: rgba(255,243,230,.8);
+    border-color: #fff3e6;
+}
+

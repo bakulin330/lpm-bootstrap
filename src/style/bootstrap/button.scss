@@ -3,7 +3,7 @@ $base-button-padding: ($base-button-height / 2);
 $base-btn-shadow: 2px;
 $btn-base-box-shadow: inset 0 -2px 0 rgba(31, 45, 61, 0.3);
 //, 0 1px 2px rgba(0,0,0,.2);
-$btn-ghost-box-shadow: $color-extra-dark-smoke 0px 0px 0px 1px inset;
+$btn-ghost-border: #A3AFB7;
 $btn-round-radius: 1000px;
 
 
@@ -30,7 +30,10 @@ button::-moz-focus-inner, input[type=submit]::-moz-focus-inner, input[type=butto
     position: relative;
     text-shadow: 0 1px rgba(0, 0, 0, .1);
     @include box-shadow($btn-base-box-shadow);
-
+    font-size: $font-m;
+    height: $base-button-height;
+    line-height: $base-button-height;
+    padding: 0 $base-button-padding;
     &:hover {
 
     }
@@ -169,7 +172,7 @@ $btm-xl-height: round(($base-button-height * $btn-multiplier * $btn-multiplier)/
     &.btn-default:active:hover,
     &.btn-default.active:hover {
         background: $color-snow;
-        @include box-shadow($btn-ghost-box-shadow);
+        border:1px solid $btn-ghost-border
     }
 
 }
@@ -265,6 +268,20 @@ $btm-xl-height: round(($base-button-height * $btn-multiplier * $btn-multiplier)/
         color: #FFF;
     }
 }
+.btn-default {
+    background: transparent;
+    color: $color-text;
+    &:hover {
+        background: #F5F5F5;
+        color: #FFF;
+    }
+    &:active,
+    &.active,
+    &.active:hover,
+    &:active:hover {
+        background: #F5F5F5;
+    }
+}
 .btn-link {
     background: transparent;
     color: $color-blue;
@@ -299,7 +316,7 @@ $btm-xl-height: round(($base-button-height * $btn-multiplier * $btn-multiplier)/
 .btn-ghost {
     color: $color-text;
     background: transparent;
-    @include box-shadow($btn-ghost-box-shadow);
+    border:1px solid $btn-ghost-border;
     text-shadow: none;
 
     &:hover {
@@ -341,7 +358,7 @@ $btm-xl-height: round(($base-button-height * $btn-multiplier * $btn-multiplier)/
     {
         background: $color-dark-snow;
         color: $color-text;
-        @include box-shadow($btn-ghost-box-shadow);
+        border:1px solid $btn-ghost-border;
     }
 }
 

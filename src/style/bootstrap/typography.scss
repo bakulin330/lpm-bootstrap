@@ -47,10 +47,7 @@ a {
     cursor: pointer;
     color: $color-blue;
     outline: none;
-
-    &:visited {
-        color: $color-blue;
-    }
+    text-decoration:none;
 }
 
 .link-dark {
@@ -104,4 +101,13 @@ a {
 
 .color-hint {
     color: $color-hint;
+}
+.ui_required {
+    color: $color-danger;
+    font-size: 14px;
+    line-height: 1px;
+    cursor: help;
+}
+.ui_error{
+    color: $color-danger;
 }

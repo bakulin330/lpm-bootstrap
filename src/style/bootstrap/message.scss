@@ -1,0 +1,23 @@
+.pp_mes_wrap {
+    position: fixed;
+    left: 50%;
+    top: 40%;
+    z-index: 1200;
+    width: 380px;
+    margin-left: -190px;
+}
+
+.pp_mes {
+    color: #FFF;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.75);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 2px 15px #888;
+    -moz-box-shadow: 0 2px 15px #888;
+    box-shadow: 0 2px 15px #888;
+    padding: 15px 15px;
+    text-shadow: 0 1px 0 #262626;
+    line-height: 160%;
+}

@@ -3,6 +3,18 @@
     visibility: visible;
 }
 
+.panel {
+    background: #FFF;
+    @include box-shadow(0 1px 3px rgba(0, 0, 0, 0.13), 0 1px 3px rgba(0, 0, 0, 0.13));
+    @include border-radius(4px)
+}
+.pos-rel {
+    position: relative;
+}
+.pos-abs {
+    position: absolute;
+}
+
 //TEXT-ALIGN
 .c-text {
     text-align: center;
@@ -252,3 +264,82 @@
     width: 500px;
 }
 
+.w51 {
+    width: 510px;
+}
+
+.w52 {
+    width: 520px;
+}
+
+.w53 {
+    width: 530px;
+}
+
+.w54 {
+    width: 540px;
+}
+
+.w55 {
+    width: 550px;
+}
+
+.w56 {
+    width: 560px;
+}
+
+.w57 {
+    width: 570px;
+}
+
+.w58 {
+    width: 580px;
+}
+
+.w59 {
+    width: 590px;
+}
+
+.w60 {
+    width: 600px;
+}
+
+.w61 {
+    width: 610px;
+}
+
+.w62 {
+    width: 620px;
+}
+
+.w63 {
+    width: 630px;
+}
+
+.w64 {
+    width: 640px;
+}
+
+.w65 {
+    width: 650px;
+}
+
+.w66 {
+    width: 660px;
+}
+
+.w67 {
+    width: 670px;
+}
+
+.w68 {
+    width: 680px;
+}
+
+.w69 {
+    width: 690px;
+}
+
+.w70 {
+    width: 700px;
+}

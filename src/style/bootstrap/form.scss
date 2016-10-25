@@ -2,7 +2,7 @@ $base-input-height: 4*$step;
 $base-input-padding: 10px;
 $input-padding-miltiplier: 0.35;
 $textarea-multiplier: 1.5;
-
+$input-m-padding: round($base-input-height * $input-padding-miltiplier);
 .input {
     //    box-shadow: inset 0 0 0 1px $color-smoke;
     color: $color-text;
@@ -18,7 +18,9 @@ $textarea-multiplier: 1.5;
     border: 1px solid $color-gray;
     width: 200px;
     font-family: $base-font-family;
-
+    font-size: $font-m;
+    height: $base-input-height;
+    padding: 0 $input-m-padding;
     &:hover {
         border: 1px solid $color-extra-dark-smoke;
     }
@@ -30,7 +32,6 @@ $textarea-multiplier: 1.5;
 
 //-------------
 
-$input-m-padding: round($base-input-height * $input-padding-miltiplier);
 .input-m {
     @extend .input;
     font-size: $font-m;
@@ -192,6 +193,9 @@ select {
             transition: background-color 0.4s, left 0.2s;
             background-color: #FFF;
         }
+        span.t_off {
+            display: none;
+        }
     }
     &.off {
         border-color: rgb(223, 223, 223);
@@ -202,6 +206,9 @@ select {
         &:after {
             left: 0;
             transition: background-color 0.4s, left 0.2s;
+        }
+        span.t_on {
+            display: none;
         }
     }
     &:after {
@@ -215,6 +222,18 @@ select {
         -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
         box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
     }
+    span {
+        display: block;
+        padding: 1px 0 0;
+        margin-left: 57px;
+        &.t_off {
+            color: $color-text;
+        }
+        &.t_on {
+            color: $color-success;
+        }
+    }
+
 }
 .range{
     position: relative;
@@ -246,4 +265,7 @@ select {
         overflow: hidden;
         background-color: $color-primary;
     }
+}
+.input-vertical{
+    margin-top:5px;
 }

@@ -5,7 +5,7 @@ table {
 
 .table {
     display: table;
-    table-layout: fixed;
+    //table-layout: fixed;
     width: 100%;
 }
 
@@ -20,7 +20,7 @@ table {
 
 .t-cell {
     display: table-cell;
-    vertical-align: top;
+    vertical-align: middle;
 }
 
 .vam .t-cell {
