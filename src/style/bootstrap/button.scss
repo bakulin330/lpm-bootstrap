@@ -34,6 +34,8 @@ button::-moz-focus-inner, input[type=submit]::-moz-focus-inner, input[type=butto
     height: $base-button-height;
     line-height: $base-button-height;
     padding: 0 $base-button-padding;
+    text-align: center;
+
     &:hover {
 
     }

@@ -27,9 +27,9 @@
 }
 
 .wind {
-    margin: 40px auto;
+    margin: (4*$step) auto;
     background: #FFF;
-    @include border-radius(4px);
+//    @include border-radius($base-border-radius);
     @include box-shadow(0 3px 30px rgba(0, 0, 0, .5));
     width: 700px;
     &.wind-s{
@@ -55,52 +55,63 @@
         display: none;
     }
     & .wind-header {
-        padding: 20px 20px;
+        padding: (3*$step) (4*$step);
         background: $color-dark-snow;
-        @include border-top-radius(4px);
         font-size: $font-l;
         color: $color-title;
         text-align: center;
         border-bottom: 1px solid $color-default;
-        line-height: 1.2;
+        line-height: 1;
         position: relative;
     }
-    & .wind-close {
+
+    $wind-close-inner-size: 14px;
+    $wind-close-padding: (1*$step);
+    .wind-close {
         display: block;
-        padding: 8px;
+        padding: (1*$step);
         position: absolute;
         cursor: pointer;
         top: 50%;
-        right: 20px;
-        margin-top: -15px;
+        right: (2*$step);
+        margin-top: -($wind-close-padding + $wind-close-inner-size/2);
         @include border-radius(50%);
-        &:hover{
-            background:#eee;
-        }
-        & > div {
+
+        > div {
             background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAALVBMVEUAAAA3SU83R045R1U3SFA3R1A2R089SVU3Rk8zTU03R083R042Q1E3R083R08Gf0yjAAAADnRSTlMAKrYSvc3OFdIU0dATz5UJOWkAAABkSURBVHgBhdJLDoAgDAbhH4qID3v/41qT7iaNLudLUGnVugmP9abhG8SmD+3Lp6GvQ5ToZ/QUdEj065Yg2SHZIdGf6JCvB1NmHghhJ/wfxZfXn8sfRIfwEsXOcUCq0dbLUK3PC6MfBoUe3cfsAAAAAElFTkSuQmCC);
-            width: 14px;
-            height: 14px;
+            width: $wind-close-inner-size;
+            height: $wind-close-inner-size;
             background-size: contain;
-            @include opacity(.7);
+            @include opacity(.6);
             background-repeat: no-repeat;
+            @include transition(opacity .3s ease);
         }
+
         &:hover > div {
             @include opacity(1);
         }
 
     }
-    & .wind-body {
-        padding: 30px;
+
+    .wind-body {
+        padding: (3*$step) (4*$step);
         position:relative;
         overflow-y:auto;
     }
-    & .wind-footer {
-        padding: 15px 30px;
-        margin-bottom: 0;
-        background:$color-dark-snow;
-        border-top: 1px solid $color-default;
-        @include border-bottom-radius(4px);
+
+    .wind-footer {
+        padding: 0 (4*$step) (3*$step);
+        //margin-bottom: 0;
+        //background:$color-dark-snow;
+        //border-top: 1px solid $color-default;
+        //@include border-bottom-radius(4px);
+
+        .btn {
+            min-width: 100px;
+            display: block;
+            float: left;
+            margin-right: (2*$step);
+        }
     }
 
 }
