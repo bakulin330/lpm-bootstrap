@@ -12,7 +12,12 @@
         z-index: -1;
     }
 }
-
+.checkbox-lg{
+    .control-indicator{
+        width: 2rem;
+        height: 2rem;
+    }
+}
 .control-indicator {
     position: absolute;
     top: .15rem;

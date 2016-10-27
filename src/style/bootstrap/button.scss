@@ -102,7 +102,7 @@ $btm-xl-height: round(($base-button-height * $btn-multiplier * $btn-multiplier)/
 }
 
 .btn-icon {
-    padding: 11px;
+    padding: 8px;
     line-height: $base-line-height;
     i.fa{
         padding:0;
@@ -421,4 +421,8 @@ $btm-xl-height: round(($base-button-height * $btn-multiplier * $btn-multiplier)/
     padding: 0;
     opacity: 0;
     cursor: pointer;
+}
+.btn-upload-form {
+    position: relative;
+    overflow: hidden;
 }

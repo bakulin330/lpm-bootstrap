@@ -1,4 +1,6 @@
-#wind-container {
+$wind-close-inner-size: 14px;
+$wind-close-padding: (1*$step);
+#wind_container {
     position: fixed;
     top: 0;
     left: 0;
@@ -31,21 +33,24 @@
     background: #FFF;
     @include box-shadow(0 3px 30px rgba(0, 0, 0, .5));
     width: 700px;
-    &.wind-s{
+    &.iblk{
+        margin-top:100px;
+    }
+    &.wind-s {
         width: 400px;
     }
-    &.wind-m{
+    &.wind-m {
         width: 700px;
     }
-    &.wind-l{
+    &.wind-l {
         width: 900px;
     }
-    &.wind-dialog{
-        & .wind-body{
+    &.wind-dialog {
+        & .wind-body {
             @include border-radius(4px);
-            text-align:center;
+            text-align: center;
         }
-        & .wind-close{
+        & .wind-close {
             top: 25px;
             right: 15px;
         }
@@ -64,8 +69,6 @@
         position: relative;
     }
 
-    $wind-close-inner-size: 14px;
-    $wind-close-padding: (1*$step);
     .wind-close {
         display: block;
         padding: (1*$step);
@@ -94,17 +97,17 @@
 
     .wind-body {
         padding: (4*$step) (4*$step);
-        position:relative;
-        overflow-y:auto;
+        position: relative;
+        overflow-y: auto;
     }
 
     .wind-footer {
         padding: 0 (4*$step) (4*$step);
-        //margin-bottom: 0;
+        margin-bottom: 0;
         //background:$color-dark-snow;
         //border-top: 1px solid $color-default;
         //@include border-bottom-radius(4px);
-
+        @include clearfix();
         .btn {
             display: block;
             float: left;
@@ -118,8 +121,155 @@
 
 }
 
-html.wind_opened{
+html.wind_opened {
     overflow: hidden;
 }
 
+//MODAL 2
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: #000;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    &.fade {
+        opacity: 0;
+    }
 
+}
+
+.fade {
+    opacity: 0;
+    -webkit-transition: opacity 0.15s linear;
+    -moz-transition: opacity 0.15s linear;
+    -o-transition: opacity 0.15s linear;
+    transition: opacity 0.15s linear;
+    &.in {
+        opacity: 1;
+
+    }
+}
+
+.modal {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    z-index: 1050;
+    width: 700px;
+    margin-left: -350px;
+    background-color: #FFF;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box;
+    outline: none;
+    &.modal-l {
+        width: 900px;
+        margin-left: -450px;
+    }
+    &.fade {
+        -webkit-transition: opacity .3s linear, top .3s ease-out;
+        -moz-transition: opacity .3s linear, top .3s ease-out;
+        -o-transition: opacity .3s linear, top .3s ease-out;
+        transition: opacity .3s linear, top .3s ease-out;
+        top: -25%;
+        &.in {
+            top: 10%;
+        }
+    }
+
+}
+
+.modal-header {
+    padding: (3*$step) (4*$step);
+    background: $color-dark-snow;
+    font-size: $font-l;
+    color: $color-title;
+    text-align: center;
+    border-bottom: 1px solid $color-default;
+    line-height: 1;
+    position: relative;
+}
+
+.hide {
+    display: none;
+}
+
+.modal-backdrop, .modal-backdrop.fade.in {
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+
+.modal-close {
+    display: block;
+    padding: (1*$step);
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    right: (2*$step);
+    margin-top: -($wind-close-padding + $wind-close-inner-size/2);
+    @include border-radius(50%);
+
+    > div {
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAALVBMVEUAAAA3SU83R045R1U3SFA3R1A2R089SVU3Rk8zTU03R083R042Q1E3R083R08Gf0yjAAAADnRSTlMAKrYSvc3OFdIU0dATz5UJOWkAAABkSURBVHgBhdJLDoAgDAbhH4qID3v/41qT7iaNLudLUGnVugmP9abhG8SmD+3Lp6GvQ5ToZ/QUdEj065Yg2SHZIdGf6JCvB1NmHghhJ/wfxZfXn8sfRIfwEsXOcUCq0dbLUK3PC6MfBoUe3cfsAAAAAElFTkSuQmCC);
+        width: $wind-close-inner-size;
+        height: $wind-close-inner-size;
+        background-size: contain;
+        @include opacity(.6);
+        background-repeat: no-repeat;
+        @include transition(opacity .3s ease);
+    }
+
+    &:hover > div {
+        @include opacity(1);
+    }
+
+}
+
+.modal-body {
+    padding: (4*$step) (4*$step);
+    position: relative;
+    overflow-y: auto;
+}
+
+.modal-footer {
+    padding: 0 (4*$step) (4*$step);
+    margin-bottom: 0;
+    //background:$color-dark-snow;
+    //border-top: 1px solid $color-default;
+    //@include border-bottom-radius(4px);
+    @include clearfix();
+    .btn {
+        display: block;
+        float: left;
+        margin-right: (2*$step);
+    }
+}
+
+.modal-dialog {
+    & .modal-body {
+        @include border-radius(4px);
+        text-align: center;
+    }
+    & .modal-close {
+        top: 25px;
+        right: 15px;
+    }
+}
+
+.plug_modal .modal-body {
+    padding: 0 30px;
+    max-height:350px;
+}
+#modal_module_success .modal-body{
+    padding:0;
+}

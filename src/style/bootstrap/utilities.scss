@@ -13,11 +13,11 @@
     position: relative;
 }
 
-.pos-abs {
+.pos-abs, .pos_abs {
     position: absolute;
 }
 
-.cur-point {
+.cur-point,.cur_point {
     cursor: pointer;
 }
 
@@ -26,15 +26,15 @@
 }
 
 //TEXT-ALIGN
-.c-text {
+.c-text,.c_text {
     text-align: center;
 }
 
-.l-text {
+.l-text, .l_text {
     text-align: left;
 }
 
-.r-text {
+.r-text, .r_text {
     text-align: right;
 }
 
@@ -43,11 +43,11 @@
 }
 
 //FLOAT
-.l-float {
+.l-float, .l_float {
     float: left;
 }
 
-.r-float {
+.r-float, .r_float {
     float: right;
 }
 
@@ -74,7 +74,7 @@
 }
 
 //WIDTH
-.w-full {
+.w-full, .w_full {
     width: 100%;
 }
 
