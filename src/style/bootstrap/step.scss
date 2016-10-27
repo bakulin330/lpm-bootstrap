@@ -1,0 +1,98 @@
+.pearl_wrapper {
+    padding: 10px 0;
+    width: 300px;
+    margin: 30px auto 0;
+    .pearls {
+        margin-bottom: 22px;
+        .pearl {
+            position: relative;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            &.current {
+
+                .pearl-wrap {
+                    .pearl-number {
+                        color: $color-primary;
+                        background-color: #FFF;
+                        border-color: $color-primary;
+                        @include transform(scale(1.3));
+                    }
+                    &:after,
+                    &:before {
+                        background-color: $color-primary;
+
+                    }
+                }
+            }
+            &.done {
+
+                .pearl-wrap {
+                    .pearl-number {
+                        color: #FFF;
+                        background-color: $color-primary;
+                        border-color: $color-primary;
+                    }
+                    &:after,
+                    &:before {
+                        background-color: $color-primary;
+
+                    }
+                }
+            }
+            .pearl-wrap {
+                width: 34px;
+                height: 34px;
+                background: #CCC;
+                border-radius: 50%;
+                display: inline-block;
+                padding: 4px 0;
+                position: relative;
+                border: 1px solid #444;
+                &:after {
+                    right: -16px;
+                    position: absolute;
+                    top: 12px;
+                    z-index: 0;
+                    width: 50%;
+                    height: 7px;
+                    content: "";
+                    background-color: #E4E4E4;
+
+                }
+                &:before {
+                    left: -16px;
+                    position: absolute;
+                    top: 12px;
+                    z-index: 0;
+                    width: 50%;
+                    height: 7px;
+                    content: "";
+                    background-color: #E4E4E4;
+
+                }
+                .pearl-number {
+                    position: relative;
+                    z-index: 1;
+                    display: inline-block;
+                    color: #FFF;
+                    text-align: center;
+                    background: #DCDCDC;
+                    border: 2px solid #DCDCDC;
+                    border-radius: 50%;
+                    width: 24px;
+                    height: 24px;
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
+
+        }
+
+    }
+}
+
+.pearl:first-of-type .pearl-wrap:before,
+.pearl:last-of-type .pearl-wrap:after {
+    display: none;
+}

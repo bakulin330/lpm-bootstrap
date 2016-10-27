@@ -5,6 +5,9 @@
     border-radius: 3px;
     padding-right: 20px;
     padding-left: 20px;
+    color: $color-warning;
+    background-color: rgba(255,243,230,.8);
+    border-color: #fff3e6;
 }
 .alert-primary{
     color: $color-primary;
@@ -30,5 +33,10 @@
     color: $color-warning;
     background-color: rgba(255,243,230,.8);
     border-color: #fff3e6;
+}
+.well{
+    padding:15px;
+    background:#F7F8F9;
+    border:1px solid $color-default;
 }
 

@@ -44,6 +44,7 @@ $input-m-padding: round($base-input-height * $input-padding-miltiplier);
     font-size: $font-m;
     padding: ($input-m-padding/$textarea-multiplier) $input-m-padding;
     line-height: $textarea-multiplier;
+    min-height: 70px;
 }
 
 //-------------
@@ -268,4 +269,32 @@ select {
 }
 .input-vertical{
     margin-top:5px;
+}
+.input-append, .input-prepend {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0;
+    white-space: nowrap;
+    .add-on {
+        display: inline-block;
+        width: auto;
+        min-width: 16px;
+        height:32px;
+        padding: 8px 5px 0;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 20px;
+        text-align: center;
+        text-shadow: 0 1px 0 #ffffff;
+        background-color: #eeeeee;
+        border: 1px solid #ccc;
+    }
+    input{
+        position: relative;
+        margin-bottom: 0;
+        vertical-align: top;
+        @include border-left-radius(0);
+        border-left:0;
+
+    }
 }

@@ -30,13 +30,18 @@
         color: #76838F;
         font-size: 14px;
         margin-left: 0;
-        padding: 10px 20px;
+        padding: 11px 20px;
         &.active {
-            background: #FFF;
+            background: #FFF !important;
             border-top-left-radius: 4px;
             border-top-right-radius: 4px;
-            color: #76838F;
+            color: $color-text;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13), 0 1px 3px rgba(0, 0, 0, 0.13);
+        }
+        &:hover {
+            background: rgba(255, 255, 255, 0.5);
+            text-decoration:none;
+            color: $color-text;
         }
     }
 }

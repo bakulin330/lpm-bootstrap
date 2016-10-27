@@ -1,4 +1,4 @@
-table {
+.table {
     border-collapse: collapse;
     border-spacing: 0;
     display: table;
@@ -7,7 +7,6 @@ table {
         text-align: left;
     }
 }
-
 
 .t-head {
     color: $color-subtitle;
@@ -23,14 +22,14 @@ table {
     vertical-align: middle;
 }
 
-.vam .t-cell {
+.vam .t-cell, .vam td {
     vertical-align: middle;
 }
 
-.vab .t-cell {
+.vab .t-cell, .vab td {
     vertical-align: bottom;
 }
-.vat .t-cell {
+.vat .t-cell, .vat td {
     vertical-align: top;
 }
 
@@ -54,8 +53,8 @@ table {
         }
     }
 }
-.new_css .table > tbody > tr > td,
-.new_css .table > thead > tr > th {
+.table > tbody > tr > td,
+.table > thead > tr > th {
     padding: 8px;
     line-height: 1.57142857;
     vertical-align: top;
@@ -70,7 +69,26 @@ table.general > thead > tr > th:first-child div {
 table.general.vam > tr > td, table.general.vam > tbody > tr > td {
     vertical-align: middle;
 }
-.new_css .table > thead:first-child > tr:first-child > td, .new_css .table > thead:first-child > tr:first-child > th {
+.table > thead:first-child > tr:first-child > td,
+.table > thead:first-child > tr:first-child > th {
     border-top: 0;
     font-weight: 600;
+}
+table.general > tr > td,
+table.general > tbody > tr > td {
+    padding: 6px 15px 6px 0;
+    vertical-align: top;
+}
+table.general > tr > th > div,
+table.general > thead > tr > th > div {
+    text-align: left;
+    color: #999;
+    border: 1px solid #E3E3E3;
+    border-left: 0;
+    border-right: 0;
+    background: #FAFAFA;
+    padding: 4px 15px 4px 0;
+}
+table.general > tr > th, table.general > thead > tr > th {
+    padding: 0;
 }

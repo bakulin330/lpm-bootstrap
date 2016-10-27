@@ -15,6 +15,7 @@ button::-moz-focus-inner, input[type=submit]::-moz-focus-inner, input[type=butto
 
 .btn {
     color: #FFF;
+    text-align: center;
     border: 0;
     @include border-radius($base-border-radius);
     cursor: pointer;
@@ -99,8 +100,11 @@ $btm-xl-height: round(($base-button-height * $btn-multiplier * $btn-multiplier)/
 }
 
 .btn-icon {
-    padding: $step;
+    padding: 11px;
     line-height: $base-line-height;
+    i.fa{
+        padding:0;
+    }
 }
 
 //.btn-outlined {
@@ -113,7 +117,7 @@ $btm-xl-height: round(($base-button-height * $btn-multiplier * $btn-multiplier)/
 //    }
 //}
 
-.btn-disabled {
+.disabled {
     top: 0 !important;
     cursor: default;
     background: $color-snow;
@@ -178,7 +182,7 @@ $btm-xl-height: round(($base-button-height * $btn-multiplier * $btn-multiplier)/
 }
 
 .btn-loading {
-    @extend .btn-disabled;
+    @extend .disabled;
     //    @include box-shadow($color-extra-dark-smoke 0px 0px 0px 1px inset);
     animation: loading-stripes 2s infinite linear;
     background-image: linear-gradient(-45deg, rgba(150, 150, 150, 0.2) 25%, transparent 25%, transparent 50%, rgba(150, 150, 150, 0.2) 50%, rgba(150, 150, 150, 0.2) 75%, transparent 75%, transparent) !important;
@@ -330,26 +334,31 @@ $btm-xl-height: round(($base-button-height * $btn-multiplier * $btn-multiplier)/
     &.btn-primary:active,
     &.btn-primary.active
     {
+        border-color:$color-primary;
         background: $color-primary;
     }
     &.btn-success:hover,
     &.btn-success:active,
     &.btn-success.active{
+        border-color:$color-success;
         background: $color-success;
     }
     &.btn-info:hover,
     &.btn-info:active,
     &.btn-info.active{
+        border-color:$color-info;
         background: $color-info;
     }
     &.btn-warning:hover,
     &.btn-warning:active,
     &.btn-warning.active{
+        border-color:$color-warning;
         background: $color-warning;
     }
     &.btn-danger:hover,
     &.btn-danger:active,
     &.btn-danger.active{
+        border-color:$color-danger;
         background: $color-danger;
     }
     &.btn-default:hover,
@@ -370,18 +379,44 @@ $btm-xl-height: round(($base-button-height * $btn-multiplier * $btn-multiplier)/
     position: relative;
     display: inline-block;
     vertical-align: middle;
+    font-size:0;
+    & > .btn-xs{
+        font-size:9px;
+    }
+    & > .btn-s{
+        font-size:11px;
+    }
+    & > .btn-m{
+        font-size:14px;
+    }
+    & > .btn-l{
+        font-size:18px;
+    }
+    & > .btn-xl{
+        font-size:22px;
+    }
     & > .btn:first-child {
         margin-left: 0;
     }
-    & > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+    & > .btn:not(:last-child) {
         @include border-right-radius(0);
-        border-left:0;
-    }
-    & > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
-        @include border-radius(0);
-    }
-    & > .btn:last-child:not(:first-child),  & > .dropdown-toggle:not(:first-child) {
-        @include border-left-radius(0);
         border-right:0;
     }
+    & > .btn:not(:first-child):not(:last-child) {
+        @include border-radius(0);
+    }
+    & > .btn:last-child:not(:first-child) {
+        @include border-left-radius(0);
+        //border-left:0;
+    }
+}
+.btn-upload-form > input[type=file], .btn-upload-form > input.upl_file {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 0;
+    font-size: 118px;
+    padding: 0;
+    opacity: 0;
+    cursor: pointer;
 }

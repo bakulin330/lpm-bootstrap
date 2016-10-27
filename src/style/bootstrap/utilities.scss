@@ -8,11 +8,21 @@
     @include box-shadow(0 1px 3px rgba(0, 0, 0, 0.13), 0 1px 3px rgba(0, 0, 0, 0.13));
     @include border-radius(4px)
 }
+
 .pos-rel {
     position: relative;
 }
+
 .pos-abs {
     position: absolute;
+}
+
+.cur-point {
+    cursor: pointer;
+}
+
+.nowp {
+    white-space: nowrap;
 }
 
 //TEXT-ALIGN
@@ -343,6 +353,7 @@
 .w70 {
     width: 700px;
 }
-.w_full{
+
+.w_full {
     width: 100%;
 }

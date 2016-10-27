@@ -59,7 +59,9 @@
             margin-left: 0 !important;
             &.r-float {
                 float: right;
-                margin-right: 0;
+                margin-right: 0;.new_css .blk_basic_tabs a:hover {
+                background: rgba(255, 255, 255, 0.5);
+            }
             }
             #logo2, #tpl-logo {
                 display: block;
