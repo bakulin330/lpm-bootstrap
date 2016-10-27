@@ -94,23 +94,26 @@
     }
 
     .wind-body {
-        padding: (3*$step) (4*$step);
+        padding: (4*$step) (4*$step);
         position:relative;
         overflow-y:auto;
     }
 
     .wind-footer {
-        padding: 0 (4*$step) (3*$step);
+        padding: 0 (4*$step) (4*$step);
         //margin-bottom: 0;
         //background:$color-dark-snow;
         //border-top: 1px solid $color-default;
         //@include border-bottom-radius(4px);
 
         .btn {
-            min-width: 100px;
             display: block;
             float: left;
             margin-right: (2*$step);
+        }
+
+        .btn-primary {
+            min-width: 130px;
         }
     }
 

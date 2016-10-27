@@ -29,7 +29,7 @@ button::-moz-focus-inner, input[type=submit]::-moz-focus-inner, input[type=butto
     font-family: $base-font-family;
     position: relative;
     text-shadow: 0 1px rgba(0, 0, 0, .1);
-    @include box-shadow($btn-base-box-shadow);
+//    @include box-shadow($btn-base-box-shadow);
     font-size: $font-m;
     height: $base-button-height;
     line-height: $base-button-height;
@@ -41,8 +41,8 @@ button::-moz-focus-inner, input[type=submit]::-moz-focus-inner, input[type=butto
     }
 
     &:active {
-        top: 1px;
-        box-shadow: inset 0 -1px 0 rgba(31, 45, 61, 0.3);
+//        top: 1px;
+        box-shadow: inset 0 3px 8px rgba(31, 45, 61, 0.3);
     }
 }
 
