@@ -1,7 +1,7 @@
 .navbar {
     width: 100%;
+    @include box-shadow(0 2px 4px rgba(0, 0, 0, .08));
     &.navbar-fixed-top {
-        @include box-shadow(0 0 10px #AAA);
         position: fixed;
         top: 0;
         z-index: 1000;
@@ -12,12 +12,33 @@
         border: 0;
         background: $color-title;
         padding: 0;
+        @include box-shadow(0 1px 10px rgba(0, 0, 0, .1));
+        .custom-dropdown.open {
+            .top-menu-item {
+                background: #506064;
+            }
+        }
 
         & > ul {
             height: 100%;
             & > li {
                 height: 100%;
                 float: left;
+                &.active {
+
+                    & > a {
+                        padding-bottom: 7px;
+                        border-bottom: 4px solid $color-primary;
+                        background: #506064;
+                        text-shadow: 0 1px 0 #074F61;
+                        box-shadow: none;
+                        color: #FFF;
+                        &:hover{
+                            background: #506064;
+                        }
+
+                    }
+                }
                 &.separator {
                     background: #717171;
                     display: block;
@@ -37,10 +58,9 @@
                         background-color: transparent;
                         color: #FFF;
                     }
-                    &:focus{
-                        background:transparent;
+                    &:focus {
+                        background: transparent;
                     }
-
 
                 }
                 &.top-menu-sites {
@@ -59,9 +79,10 @@
             margin-left: 0 !important;
             &.r-float {
                 float: right;
-                margin-right: 0;.new_css .blk_basic_tabs a:hover {
-                background: rgba(255, 255, 255, 0.5);
-            }
+                margin-right: 0;
+                .new_css .blk_basic_tabs a:hover {
+                    background: rgba(255, 255, 255, 0.5);
+                }
             }
             #logo2, #tpl-logo {
                 display: block;
@@ -115,6 +136,17 @@
                 top: 55px;
                 padding-top: 0;
                 margin-top: 0;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 0 10px 10px 10px;
+                    border-color: transparent transparent #F5F5F5 transparent;
+                    top: -10px;
+                    right: 18px;
+                }
                 .account-menu__info {
                     background: $color-dark-snow;
                     border-bottom: 1px solid $color-default;
@@ -153,6 +185,18 @@
         padding: 30px 30px 30px 0;
         left: -210px;
         top: 53px;
+        &:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 10px 10px 10px;
+            border-color: transparent transparent #F5F5F5 transparent;
+            top: -10px;
+            right: 50%;
+            margin-right: -10px;
+        }
         .dropdown-menu-more__item {
             width: 125px;
             float: left;
