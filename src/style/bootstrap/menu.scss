@@ -24,6 +24,7 @@
             & > li {
                 height: 100%;
                 float: left;
+                margin-left:0;
                 &.active {
 
                     & > a {
@@ -129,23 +130,15 @@
         }
         .custom-dropdown-menu {
             &.account-menu {
-
+                top: 65px;
                 height: auto;
                 right: 0;
                 left: auto;
-                top: 55px;
                 padding-top: 0;
                 margin-top: 0;
                 &:after {
-                    content: '';
-                    position: absolute;
-                    width: 0;
-                    height: 0;
-                    border-style: solid;
-                    border-width: 0 10px 10px 10px;
                     border-color: transparent transparent #F5F5F5 transparent;
-                    top: -10px;
-                    right: 18px;
+
                 }
                 .account-menu__info {
                     background: $color-dark-snow;
@@ -184,19 +177,8 @@
         width: 500px;
         padding: 30px 30px 30px 0;
         left: -210px;
-        top: 53px;
-        &:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 0 10px 10px 10px;
-            border-color: transparent transparent #F5F5F5 transparent;
-            top: -10px;
-            right: 50%;
-            margin-right: -10px;
-        }
+        top: 55px;
+
         .dropdown-menu-more__item {
             width: 125px;
             float: left;
@@ -273,7 +255,7 @@
             position: absolute;
             width: 450px;
             z-index: 1000;
-            top: 53px;
+            top: 55px;
             height: 410px;
             left: -350px;
             background: transparent;
@@ -282,6 +264,10 @@
             -moz-box-shadow: 0 0 15px rgba(0, 0, 0, .25);
             box-shadow: 0 0 15px rgba(0, 0, 0, .25);
             border-radius: 4px;
+            &:before,
+            &:after{
+                right: 73px;
+            }
 
         }
 

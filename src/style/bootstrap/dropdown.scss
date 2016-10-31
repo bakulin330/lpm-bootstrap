@@ -33,21 +33,46 @@ $dropdown-item-hover: #F3F7F9;
 
 .dropdown-menu, .custom-dropdown-menu {
     position: absolute;
-    top: 100%;
+    top: 50%;
     left: 0;
     z-index: 1000;
-    display: none;
+    visibility:hidden;
+    opacity:0;
     float: left;
     min-width: 160px;
-    padding: 5px 0;
-    margin: 2px 0 0;
+    margin: 10px 0 0;
     font-size: $base-font-size;
     list-style: none;
     background-color: #FFF;
     border: 1px solid $color-default;
     @include border-radius(4px);
-    @include box-shadow(0 3px 12px rgba(0, 0, 0, .10));
+    @include box-shadow(0 3px 12px rgba(0, 0, 0, .2));
+    @include transition(all .2s ease-out);
     background-clip: padding-box;
+    &:after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 10px 10px 10px;
+        border-color: transparent transparent #FFF transparent;
+        top: -10px;
+        right: 50%;
+        margin-right: -10px;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 11px 11px 11px;
+        border-color: transparent transparent #E4EAEC transparent;
+        top: -11px;
+        right: 50%;
+        margin-right: -11px;
+    }
     &.r-float {
         right: 0;
         left: auto;
@@ -59,17 +84,17 @@ $dropdown-item-hover: #F3F7F9;
         background-color: $color-default;
     }
     & > li {
-        padding: 0 5px;
-        margin: 2px 0;
+        margin: 0;
         & > a {
             display: block;
-            padding: 8px 15px;
+            padding: 10px 15px;
             clear: both;
             font-weight: normal;
             line-height: $base-line-height;
             color: $color-text;
             white-space: nowrap;
             text-decoration: none;
+            text-align:left;
             @include border-radius(3px);
             &:hover,
             &:focus {
@@ -99,7 +124,9 @@ $dropdown-item-hover: #F3F7F9;
 .open {
     & > .dropdown-menu,
     & > .custom-dropdown-menu {
-        display: block;
+        visibility:visible;
+        opacity:1;
+        top: 100%;
     }
     & > a {
         outline: 0;
@@ -119,6 +146,23 @@ $dropdown-item-hover: #F3F7F9;
     & > .custom-dropdown-menu {
         right: 0;
         left: auto;
+        &:after,
+        &:before {
+            right: 20px;
+        }
+    }
+}
+
+.l-float {
+    & > .dropdown-menu,
+    & > .custom-dropdown-menu {
+        left: 0;
+        right: auto;
+        &:after,
+        &:before {
+            left: 20px;
+            right: auto;
+        }
     }
 }
 
@@ -133,7 +177,18 @@ $dropdown-item-hover: #F3F7F9;
     & .custom-dropup-menu {
         top: auto;
         bottom: 100%;
-        margin-bottom: 1px;
+        margin-bottom: 10px;
+        margin-top:0;
+        &:after,
+        &:before{
+            top:auto;
+            bottom:-10px;
+            @include transform(rotate(180deg));
+        }
+        &:before{
+            bottom:-11px;
+        }
+
     }
 }
 

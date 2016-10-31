@@ -17,6 +17,19 @@ body {
     color: $color-text;
 }
 
+hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #EEE;
+    border-bottom: 1px solid #FFF;
+}
+
+ul {
+    li {
+        margin-left: 30px;
+    }
+}
+
 .font-xxl {
     font-size: $font-xxl;
 }
