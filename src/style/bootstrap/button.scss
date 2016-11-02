@@ -15,7 +15,7 @@ button::-moz-focus-inner, input[type=submit]::-moz-focus-inner, input[type=butto
     color: #FFF;
     text-align: center;
     border: 0;
-    @include border-radius($base-border-radius);
+    @include border-radius(1000px);
     cursor: pointer;
     display: inline-block;
     outline: none;
