@@ -24,7 +24,7 @@
             & > li {
                 height: 100%;
                 float: left;
-                margin-left:0;
+                margin-left: 0;
                 &.active {
 
                     & > a {
@@ -34,7 +34,7 @@
                         text-shadow: 0 1px 0 #074F61;
                         box-shadow: none;
                         color: #FFF;
-                        &:hover{
+                        &:hover {
                             background: #506064;
                         }
 
@@ -221,7 +221,6 @@
     #btn-pay-balance {
         float: left;
         display: inline-block;
-        font-size: 13px;
         margin: 12px 10px 0 0;
         background: #FFF;
         color: $color-text;
@@ -265,7 +264,7 @@
             box-shadow: 0 0 15px rgba(0, 0, 0, .25);
             border-radius: 4px;
             &:before,
-            &:after{
+            &:after {
                 right: 73px;
             }
 
@@ -532,5 +531,55 @@
         opacity: .9;
         height: 20px;
         line-height: 20px;
+    }
+}
+
+.test-menu {
+    &.navbar {
+        .navbar-inner {
+            background: #FFF;
+            .custom-dropdown.open {
+                .top-menu-item {
+                    background: #f5f5f5;
+                }
+
+            }
+            & > ul {
+                & > li {
+                    &.active {
+                        & > a,
+                        & > a:hover {
+                            background: #f5f5f5;
+
+                        }
+                    }
+                    & > a {
+                        background: #FFF;
+                        text-shadow: none;
+                        color: $color-title;
+                        &:hover{
+                            background: #f5f5f5;
+                        }
+                    }
+                }
+            }
+            .whats_new {
+                .icon-bell {
+                    &:hover{
+                        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQwMCA0NDcuNSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNDAwIDQ0Ny41IiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBvcGFjaXR5PSIwLjkiIGZpbGw9IiNjNWM1YzUiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgICAgIiBkPSJNMzQwLjEsMjc4LjFsNTAuOCw3NC44SDIwMC4ySDkuNWw1MC45LTc0LjhWMTY2LjUgIGMwLDAtNi40LTkzLDk4LjYtMTI2LjljMCwwLDE0LjktMTMsMTguNS0yNC45YzIuMS03LDIyLjgtNC44LDIyLjgtNC44czIwLjctMi4yLDIyLjgsNC44YzMuNiwxMS45LDE4LjUsMjQuOSwxOC41LDI0LjkgIGMxMDQuOSwzMy45LDk4LjYsMTI2LjksOTguNiwxMjYuOVYyNzguMXogTTI3Ny42LDM3MC4xYzAsMCwzLjEsNjQtNzcuNCw2NGMtODAuNCwwLTc3LjItNjQtNzcuMi02NGgySDI3Ny42eiIvPjwvc3ZnPg==);
+                    }
+                }
+            }
+        }
+    }
+    .top-menu-item,
+    .top-menu-item:hover,
+    .top-menu-item:focus {
+        color: $color-title;
+        &.custom-dropdown-btn{
+            &:hover{
+                background: #f5f5f5;
+            }
+        }
     }
 }
