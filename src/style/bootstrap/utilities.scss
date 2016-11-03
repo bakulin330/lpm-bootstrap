@@ -9,15 +9,18 @@
     @include border-radius(4px)
 }
 
-.pos-rel, .pos_rel {
+.pos-rel,
+.pos_rel {
     position: relative;
 }
 
-.pos-abs, .pos_abs {
+.pos-abs,
+.pos_abs {
     position: absolute;
 }
 
-.cur-point,.cur_point {
+.cur-point,
+.cur_point {
     cursor: pointer;
 }
 
@@ -26,15 +29,18 @@
 }
 
 //TEXT-ALIGN
-.c-text,.c_text {
+.c-text,
+.c_text {
     text-align: center;
 }
 
-.l-text, .l_text {
+.l-text,
+.l_text {
     text-align: left;
 }
 
-.r-text, .r_text {
+.r-text,
+.r_text {
     text-align: right;
 }
 
@@ -43,11 +49,13 @@
 }
 
 //FLOAT
-.l-float, .l_float {
+.l-float,
+.l_float {
     float: left;
 }
 
-.r-float, .r_float {
+.r-float,
+.r_float {
     float: right;
 }
 

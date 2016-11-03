@@ -7,7 +7,7 @@
         z-index: 1000;
     }
     .navbar-inner {
-        height: 55px;
+        height: $top-menu-height;
         border-radius: 0;
         border: 0;
         background: $color-title;
@@ -51,7 +51,7 @@
                 & > a {
                     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
                     color: rgba(210, 210, 210, 0.9);
-                    line-height: 55px;
+                    line-height: $top-menu-height;
                     font-size: $base-font-size;
                     height: 100%;
                     padding: 0 20px;
@@ -119,7 +119,7 @@
                 display: inline-block;
                 margin: 13px 10px 0 0px;
                 float: left;
-                line-height: 55px;
+                line-height: $top-menu-height;
             }
             .fa {
                 position: absolute;
@@ -165,7 +165,7 @@
         display: inline-block;
         height: 100%;
         padding: 0 15px;
-        line-height: 55px;
+        line-height: $top-menu-height;
         font-size: 14px;
         &:hover,
         &:focus {
@@ -177,7 +177,7 @@
         width: 500px;
         padding: 30px 30px 30px 0;
         left: -210px;
-        top: 55px;
+        top: $top-menu-height;
 
         .dropdown-menu-more__item {
             width: 125px;
@@ -254,15 +254,13 @@
             position: absolute;
             width: 450px;
             z-index: 1000;
-            top: 55px;
+            top: $top-menu-height;
             height: 410px;
             left: -350px;
             background: transparent;
             border: none;
-            -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, .25);
-            -moz-box-shadow: 0 0 15px rgba(0, 0, 0, .25);
-            box-shadow: 0 0 15px rgba(0, 0, 0, .25);
-            border-radius: 4px;
+            @include box-shadow(0 0 15px rgba(0, 0, 0, .25));
+            @include border-radius($base-border-radius);
             &:before,
             &:after {
                 right: 73px;
@@ -272,7 +270,7 @@
 
         &.unread:after {
             content: '1';
-            background: #F96868;
+            background: $color-danger;
             width: 17px;
             height: 17px;
             position: absolute;
@@ -295,15 +293,14 @@
             width: 450px;
             height: 50px;
             border-bottom: 1px solid #DDD;
-            border-top-right-radius: 4px;
-            border-top-left-radius: 4px;
+            @include border-top-radius($base-border-radius);
         }
 
         .inbox_btn {
             padding: 4px 10px;
             color: inherit;
             border: 1px solid transparent;
-            border-radius: 4px;
+            @include border-radius($base-border-radius);
         }
 
         .message:hover {
@@ -340,8 +337,8 @@
         .inbox_header_text {
             line-height: 50px;
             font-weight: bold;
-            font-size: 16px;
-            color: #37474F;
+            font-size: $font-l;
+            color: $color-title;
         }
 
         .inbox_mark_read {
@@ -350,7 +347,7 @@
             right: 25px;
             line-height: 50px;
             color: #BBB;
-            font-size: 13px;
+            font-size: $font-m;
             text-decoration: underline;
         }
 
@@ -525,7 +522,7 @@
     .label-id {
         padding: 0 5px;
         background: $color-primary;
-        border-radius: 2px;
+        @include border-radius($base-border-radius);
         color: #FFF;
         display: inline-block;
         opacity: .9;
@@ -540,7 +537,7 @@
             background: #FFF;
             .custom-dropdown.open {
                 .top-menu-item {
-                    background: #f5f5f5;
+                    background: $color-dark-snow;
                 }
 
             }
@@ -549,7 +546,7 @@
                     &.active {
                         & > a,
                         & > a:hover {
-                            background: #f5f5f5;
+                            background: $color-dark-snow;
 
                         }
                     }
@@ -558,7 +555,7 @@
                         text-shadow: none;
                         color: $color-title;
                         &:hover{
-                            background: #f5f5f5;
+                            background: $color-dark-snow;
                         }
                     }
                 }
@@ -578,7 +575,7 @@
         color: $color-title;
         &.custom-dropdown-btn{
             &:hover{
-                background: #f5f5f5;
+                background: $color-dark-snow;
             }
         }
     }

@@ -3,7 +3,7 @@
     padding-left: 1.5rem;
     color: $color-text;
     cursor: pointer;
-    line-height: 1.5;
+    line-height: $base-line-height;
     @include no-select;
 
     input {

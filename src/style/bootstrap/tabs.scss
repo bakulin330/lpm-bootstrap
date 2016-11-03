@@ -54,7 +54,7 @@
             border: 1px solid transparent;
             background: #e1e4e4;;
             opacity:.9;
-            @include border-top-radius(4px);
+            @include border-top-radius($base-border-radius);
             &:hover {
                 background: #d4d7d8;
                 opacity:1;
@@ -106,7 +106,7 @@
         float: left;
 
         > a {
-            border-radius: 4px;
+            @include border-radius($base-border-radius);
             &:hover{
                 background:$color-default;
                 color:$color-text;

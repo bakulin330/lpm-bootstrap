@@ -1,8 +1,7 @@
 .breadcrumb {
-    background: #FAFAFA;
     margin: 0;
     border-bottom: 1px solid #EEE;
-    border-radius: 0;
+    @include border-radius(0);
     padding: 6px 0;
     &>li {
         display: inline-block;
@@ -10,6 +9,6 @@
         margin:0;
     }
     &>.active {
-        color: #999999;
+        color: $color-smoke;
     }
 }

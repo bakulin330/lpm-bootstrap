@@ -25,10 +25,10 @@
         margin: 100px auto;
         padding: 25px;
         color: $color-text;
-        font-size: 16px;
-        @include border-radius(4px);
+        font-size: $font-l;
+        @include border-radius($base-border-radius);
         text-align: center;
-        line-height: 1.48;
+        line-height: $base-line-height;
         .icon_notify {
             position: static;
             width: 100px;
@@ -60,7 +60,7 @@
         background-size: contain;
     }
     .overlay_title {
-        font-size: 28px;
+        font-size: $font-xxl;
         color: $color-title;
         margin-bottom: 20px;
         line-height: 1.1;

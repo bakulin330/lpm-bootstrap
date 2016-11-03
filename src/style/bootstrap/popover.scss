@@ -11,10 +11,10 @@ $tooltip-bg: rgba(0, 0, 0, 0.8);
     white-space: normal;
     background-color: #FFF;
     border: 1px solid $color-extra-dark-smoke;
-    border-radius: 6px;
+    @include border-radius ($base-border-radius);
     @include box-shadow(0 3px 7px rgba(0, 0, 0, 0.17));
     background-clip: padding-box;
-    font-size:12px;
+    font-size:$font-s;
 
     .popover-title{
         padding:3px 13px;
@@ -220,6 +220,6 @@ $tooltip-bg: rgba(0, 0, 0, 0.8);
     text-align: center;
     text-decoration: none;
     background-color: $tooltip-bg;
-    border-radius: 4px;
+    @include border-radius($base-border-radius);
 }
 

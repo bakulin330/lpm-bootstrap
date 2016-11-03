@@ -22,21 +22,18 @@
         float: left;
         border-bottom: 0;
         text-decoration: none;
-        border-top-left-radius: 4px;
-        border-top-right-radius: 4px;
+        @include border-top-radius($base-border-radius);
         border: none;
         background: transparent;
         box-shadow: none;
-        color: #76838F;
-        font-size: 14px;
+        font-size: $font-m;
         margin-left: 0;
         padding: 11px 20px;
         &.active {
             background: #FFF !important;
-            border-top-left-radius: 4px;
-            border-top-right-radius: 4px;
+            @include border-top-radius($base-border-radius);
             color: $color-text;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13), 0 1px 3px rgba(0, 0, 0, 0.13);
+            @include box-shadow(0 1px 3px rgba(0, 0, 0, 0.13), 0 1px 3px rgba(0, 0, 0, 0.13));
         }
         &:hover {
             background: rgba(255, 255, 255, 0.5);

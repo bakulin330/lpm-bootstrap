@@ -1,13 +1,12 @@
 .alert {
     padding: 15px;
-    margin-bottom: 22px;
-    border: 1px solid transparent;
-    border-radius: 3px;
-    padding-right: 20px;
-    padding-left: 20px;
+    margin-bottom: 2*$step;
+    border: 1px solid #f9dec1;
+    border-radius: $base-border-radius;
+    padding-right: 2*$step;
+    padding-left: 2*$step;
     color: #ce8f4b;
     background-color: rgba(255, 246, 226, 0.8);
-    border-color: #f9dec1;
 }
 .alert-primary{
     color: $color-primary;
@@ -21,8 +20,8 @@
 }
 .alert-success {
     color: $color-success;
-    background-color: rgba(231,250,242,.8);
-    border-color: #b2e8d1;
+    background-color: #d5f5e2;
+    border-color: #92cab2;
 }
 .alert-danger {
     color: $color-danger;
