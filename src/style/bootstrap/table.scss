@@ -29,15 +29,21 @@ table {
     vertical-align: middle;
 }
 
-.vam .t-cell, .table.vam > tbody > tr > td {
+.vam .t-cell,
+.table.vam > tbody > tr > td,
+.vam tbody{
     vertical-align: middle;
 }
 
-.vab .t-cell, .table.vab > tbody > tr > td {
+.vab .t-cell,
+.table.vab > tbody > tr > td,
+.vab tbody{
     vertical-align: bottom;
 }
 
-.vat .t-cell, .table.vat > tbody > tr > td {
+.vat .t-cell,
+.table.vat > tbody > tr > td,
+.vat tbody{
     vertical-align: top;
 }
 

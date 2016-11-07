@@ -14,7 +14,7 @@ html(lang="ru", ng-app="app")
         script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
         script(src="v.js" type="text/javascript")
         script(src="b.js" type="text/javascript")
-    body(ng-controller="AppCtrl as main")
+    body.home(ng-controller="AppCtrl as main")
         div#nocss(style="margin:75px 0;text-align:center;")
             h1 Your browser was unable to load all of App's resources.
             | They may have been blocked by your firewall, proxy or browser configuration.#[hr]
@@ -78,6 +78,13 @@ html(lang="ru", ng-app="app")
                             div.ex-col col-s-6 #[br] col-m-4 #[br] col-l-3 #[br] col-xl-2
                         div.col-s-6.col-m-4.col-l-3.col-xl-2
                             div.ex-col col-s-6 #[br] col-m-4 #[br] col-l-3 #[br] col-xl-2
+                    xmp.code
+
+                            |<div class="row">
+                            |   <div class="col-s-6 col-m-4 col-l-3 col-xl-2"></div>
+                            |   <div class="col-s-6 col-m-4 col-l-3 col-xl-2"></div>
+                            |   <div class="col-s-6 col-m-4 col-l-3 col-xl-2"></div>
+                            |</div>
                 div.lib-section.mt5
                     a(name="tabs")
                     div.color-title.font-xxl Tabs
@@ -91,9 +98,22 @@ html(lang="ru", ng-app="app")
                                     a(href="#") Dropdown
                                 li
                                     a(href="#") Form
+
+
+                            xmp.code
+                                |<ul class="nav nav-pills nav-stacked">
+                                |   <li class="active">
+                                |       <a href="#">Modal</a>
+                                |   </li>
+                                |   <li>
+                                |       <a href="#">Dropdown</a>
+                                |   </li>
+                                |   <li>
+                                |       <a href="#">Form</a>
+                                |   </li>
+                                |</ul>
                         div.col-l-6
                             div.color-subtitle.font-xl.mt2 Horizontal
-                            div.color-subtitle.font-l.mt2 Common
                             ul.nav.nav-tabs.mt3
                                 li.active
                                     a(href="#") Modal
@@ -101,15 +121,18 @@ html(lang="ru", ng-app="app")
                                     a(href="#") Dropdown
                                 li
                                     a(href="#") Form
-
-                            div.color-subtitle.font-l.mt2 Line
-                            ul.nav.nav-tabs.nav-tabs-line.mt2
-                                li.active
-                                    a(href="#") Modal
-                                li
-                                    a(href="#") Dropdown
-                                li
-                                    a(href="#") Form
+                            xmp.code
+                                |<ul class="nav nav-tabs">
+                                |   <li class="active">
+                                |       <a href="#">Modal</a>
+                                |   </li>
+                                |   <li>
+                                |       <a href="#">Dropdown</a>
+                                |   </li>
+                                |   <li>
+                                |       <a href="#">Form</a>
+                                |   </li>
+                                |</ul>
 
                 div.lib-section.mt5
                     a(name="modal")
@@ -121,7 +144,33 @@ html(lang="ru", ng-app="app")
                             button.btn.btn-m.btn-default.btn-ghost.btn-round(onclick="$('html').addClass('wind-opened');$('#wind-container').show(); $('.wind-wrap').removeClass('hidden'); $('#wind-m').removeClass('hidden');") Medium
                         div.col-l-4
                             button.btn.btn-l.btn-default.btn-ghost.btn-round(onclick="$('html').addClass('wind-opened');$('#wind-container').show(); $('.wind-wrap').removeClass('hidden'); $('#wind-l').removeClass('hidden');") Large
-
+                    div.mt3.font-l В сервисе есть 2 типа окон
+                    div.mt2.font-m Первый тип с классом .wind
+                    xmp.code
+                        |<div  class="wind wind-m">
+                        |   <div class="wind-header">
+                        |       Header
+                        |       <div class="wind-close"><div></div></div>
+                        |   </div>
+                        |   <div class="wind-body">body</div>
+                        |   <div class="wind-footer">
+                        |       <div class="btn btn-m btn-primary">Save</div>
+                        |       <div class="btn btn-m btn-default btn-ghost">Cancel</div>
+                        |   </div>
+                        |</div>
+                    div.mt3.font-m Второй тип с классом .modal
+                    xmp.code
+                        |<div class="modal">
+                        |   <div class="modal-header">
+                        |       Header
+                        |       <div class="modal-close" data-dismiss="modal"><div></div></div>
+                        |   </div>
+                        |   <div class="modal-body">body</div>
+                        |   <div class="modal-footer">
+                        |       <div class="btn btn-m btn-primary">Save</div>
+                        |       <div class="btn btn-m btn-default btn-ghost">Cancel</div>
+                        |   </div>
+                        |</div>
                 div.lib-section.mt5
                     a(name="dropdowns")
                     div.color-title.font-xxl Dropdowns
@@ -145,6 +194,8 @@ html(lang="ru", ng-app="app")
                                         a item active
 
 
+
+
                         div.col-l-6
                             div.color-subtitle.font-xl Dropup
                             span.dropup.mt3(onclick="$(this).toggleClass('open');$('#btn-dropup').toggleClass('active');")
@@ -158,6 +209,37 @@ html(lang="ru", ng-app="app")
                                     li.divider
                                     li
                                         a item
+
+                    div.mt3 Разница между дропдауном и дропапом только в классах у родителя .dropdown и .dropup соответственно
+                    xmp.code
+                        |<span class="dropdown mt3">
+                        |    <a data-toggle="dropdown" class="btn">Dropdown<b class="caret"></b></a>
+                        |    <ul class="dropdown-menu">
+                        |        <li>
+                        |            <a>item</a>
+                        |        </li>
+                        |        <li class="divider"></li>
+                        |       <li>
+                        |           <a>item</a>
+                        |       </li>
+                        |       <li class="disabled">
+                        |           <a>item disabled</a>
+                        |       </li>
+                        |        <li class="active">
+                        |           <a>item active</a>
+                        |       </li>
+                        |   </ul>
+                        |</span>
+                    div.mt3 Есть ещё custom dropdown, при клике на него он не скрывается
+                    xmp.code
+                        |<span class="custom-dropdown mt3">
+                        |    <a class="btn custom-dropdown-btn">Custom dropdown<b class="caret"></b></a>
+                        |    <ul class="custom-dropdown-menu">
+                        |        <li>
+                        |            <a>item</a>
+                        |        </li>
+                        |   </ul>
+                        |</span>
 
                 div.lib-section.mt5
                     a(name="popover")
@@ -268,7 +350,12 @@ html(lang="ru", ng-app="app")
                                 div.font-s.color-hint S Button
                             div.t-cell
                                 div.font-s.color-hint XS Button
-
+                    xmp.code
+                        |<button class="btn btn-primary btn-xl">Кнопка</button>
+                        |<button class="btn btn-primary btn-l">Кнопка</button>
+                        |<button class="btn btn-primary btn-m">Кнопка</button>
+                        |<button class="btn btn-primary btn-s">Кнопка</button>
+                        |<button class="btn btn-primary btn-xs">Кнопка</button>
                     div.color-subtitle.font-xl.mt3 Variants
                     div.mt2
                         button.btn-m.btn-primary Primary
@@ -278,6 +365,14 @@ html(lang="ru", ng-app="app")
                         button.btn-m.btn-danger.ml2 Danger
                         button.btn-m.btn-link.ml2 Link
                         button.btn-m.btn-link-text.ml2 Link-text
+                    xmp.code
+                        |<button class="btn btn-primary">Кнопка</button>
+                        |<button class="btn btn-success">Кнопка</button>
+                        |<button class="btn btn-info">Кнопка</button>
+                        |<button class="btn btn-warning">Кнопка</button>
+                        |<button class="btn btn-danger">Кнопка</button>
+                        |<button class="btn btn-link">Кнопка</button>
+                        |<button class="btn btn-link-text">Кнопка</button>
 
                     div.color-subtitle.font-xl.mt3 Ghost
                     div.mt3
@@ -287,27 +382,31 @@ html(lang="ru", ng-app="app")
                         button.btn-m.btn-ghost.btn-info.ml2.mr2 Ghost info
                         button.btn-m.btn-ghost.btn-warning.mt2 Ghost warning
                         button.btn-m.btn-ghost.btn-danger.mt2 Ghost danger
-
-                    div.color-subtitle.font-xl.mt2 Round
-                    div.mt3.tbl-btns.p2
-                        button.btn-xs.btn-ghost.btn-default.btn-round Кнопка
-                        button.btn-s.btn-ghost.btn-default.btn-round.ml2 Кнопка
-                        button.btn-m.btn-ghost.btn-default.btn-round.ml2 Кнопка
-                        button.btn-l.btn-ghost.btn-default.btn-round.ml2 Кнопка
-                        button.btn-xl.btn-ghost.btn-default.btn-round.ml2 Кнопка
+                    xmp.code
+                        |<button class="btn btn-primary btn-ghost">Кнопка</button>
+                    //div.color-subtitle.font-xl.mt2 Round
+                    //div.mt3.tbl-btns.p2
+                    //    button.btn-xs.btn-ghost.btn-default.btn-round Кнопка
+                    //    button.btn-s.btn-ghost.btn-default.btn-round.ml2 Кнопка
+                    //    button.btn-m.btn-ghost.btn-default.btn-round.ml2 Кнопка
+                    //    button.btn-l.btn-ghost.btn-default.btn-round.ml2 Кнопка
+                    //    button.btn-xl.btn-ghost.btn-default.btn-round.ml2 Кнопка
 
                     div.color-subtitle.font-xl.mt2 Disabled
                     div.mt3
-                        button.btn-m.btn-disabled.btn-default Default
-                        button.btn-m.btn-disabled.btn-primary.ml2 Primary
-                        button.btn-m.btn-disabled.btn-success.ml2 Success
-                        button.btn-m.btn-disabled.btn-info.ml2 Info
-                        button.btn-m.btn-disabled.btn-warning.ml2 Warning
-                        button.btn-m.btn-disabled.btn-danger.ml2 Danger
+                        button.btn-m.disabled.btn-primary.ml2 Primary
+                        button.btn-m.disabled.btn-success.ml2 Success
+                        button.btn-m.disabled.btn-info.ml2 Info
+                        button.btn-m.disabled.btn-warning.ml2 Warning
+                        button.btn-m.disabled.btn-danger.ml2 Danger
+                    xmp.code
+                        |<button class="btn btn-primary disabled">Кнопка</button>
 
                     div.color-subtitle.font-xl.mt2 Loading
                     div.mt3
                         button.btn-m.btn-loading Loading
+                    xmp.code
+                        |<button class="btn btn-primary btn-loading">Кнопка</button>
 
                     div.color-subtitle.font-xl.mt2 Block
                     div.mt3
@@ -315,13 +414,18 @@ html(lang="ru", ng-app="app")
                     div.color-subtitle.font-xl.mt2 Group
                     div.mt3
                         div.btn-group
-                            button.btn.base-button.btn-m.btn-primary Default
                             button.btn.btn-m.btn-primary Default
                             button.btn.btn-m.btn-primary Default
-                        div.btn-group.ml3
-                            button.btn.base-button.btn-m.btn-primary.btn-round Default
-                            button.btn.btn-m.btn-primary.btn-round Default
-                            button.btn.btn-m.btn-primary.btn-round Default
+                            button.btn.btn-m.btn-primary Default
+                        //div.btn-group.ml3
+                        //    button.btn.base-button.btn-m.btn-primary.btn-round Default
+                        //    button.btn.btn-m.btn-primary.btn-round Default
+                        //    button.btn.btn-m.btn-primary.btn-round Default
+                    xmp.code
+                        |<div class="btn-group">
+                        |   <button class="btn btn-primary">Кнопка</button>
+                        |   <button class="btn btn-primary">Кнопка</button>
+                        |</div>
 
 
 
@@ -347,6 +451,12 @@ html(lang="ru", ng-app="app")
                             div.mt3
                                     input.input-xl.input-disabled(value="Disabled input")
                                     button.btn-xl.btn-disabled.btn-primary.ml1 Disabled
+                            xmp.code
+                                |<input class="input" type="text">
+                                |<input class="input-s" type="text">
+                                |<input class="input-m" type="text">
+                                |<input class="input-l" type="text">
+                                |<input class="input-xl" type="text">
                         div.col-l-6
                                 div.font-xl.color-subtitle Select
                                 div.mt3
@@ -369,18 +479,28 @@ html(lang="ru", ng-app="app")
                                         option a
                                         option b
                                         option c
+                                xmp.code
+                                    |<select class="select" type="text"></select>
+                                    |<select class="select-s" type="text"></select>
+                                    |<select class="select-m" type="text"></select>
+                                    |<select class="select-l" type="text"></select>
+                                    |<select class="select-xl" type="text"></select>
 
                     div.row.mt3
                         div.col-l-6
                             div.font-xl.mt3.color-subtitle Round input
                             div.mt3
                                 input.input-m.input-round(placeholder="Плейсхолдер")
+                            xmp.code
+                                |<input class="input input-round">
                             div.mt3.form-group-round
                                 input.input.input-m(placeholder="Плейсхолдер")
                                 button.btn.btn-m.btn-primary Кнопка
-                            div.mt3.form-group-round
-                                input.input.input-l(placeholder="Плейсхолдер")
-                                button.btn.btn-l.btn-primary Кнопка
+                            xmp.code
+                                |<div class="form-group-round" >
+                                |<input class="input input-round">
+                                |<button class="btn">Кнопка</button>
+                                |</div>
                         div.col-l-6
                             div.font-xl.mt3.color-subtitle Range
                                 div.range.mt3
@@ -395,8 +515,12 @@ html(lang="ru", ng-app="app")
                                     div.range-bar
                                     div.range-pointer(style="left:75%")
                                     div.range-selected(style="left:0; width:75%;")
-
-
+                            xmp.code
+                                |<div class="range">
+                                |   <div class="range-bar"></div>
+                                |   <div style="left:20%" class="range-pointer"></div>
+                                |   <div style="left:0; width:20%;" class="range-selected"></div>
+                                |</div>
 
                     div.row.mt3
                         div.col-l-6

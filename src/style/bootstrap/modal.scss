@@ -176,7 +176,7 @@ html.wind_opened {
         margin-left: -450px;
     }
     &.fade {
-        @include transition (opacity .3s linear, top .3s ease-out);
+        transition: opacity .3s linear, top .3s ease-out;
         top: -25%;
         &.in {
             top: 10%;
@@ -194,6 +194,7 @@ html.wind_opened {
     border-bottom: 1px solid $color-default;
     line-height: 1;
     position: relative;
+    @include border-top-radius($base-border-radius);
 }
 
 .hide {
