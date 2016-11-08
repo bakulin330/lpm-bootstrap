@@ -290,6 +290,7 @@ $btm-xl-height: round(($base-button-height * $btn-multiplier * $btn-multiplier)/
     background: transparent;
     color: $color-blue;
     @include box-shadow(none);
+    text-shadow:none;
     &:hover {
         background: transparent;
         color: $color-blue-dark;
@@ -306,6 +307,7 @@ $btm-xl-height: round(($base-button-height * $btn-multiplier * $btn-multiplier)/
     background: transparent;
     color: $color-text;
     @include box-shadow(none);
+    text-shadow:none;
     &:hover {
         background: transparent;
         color: $color-subtitle;
