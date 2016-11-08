@@ -12,12 +12,16 @@
         z-index: -1;
     }
 }
-.checkbox-lg{
-    .control-indicator{
+
+.checkbox-l {
+    padding-left: 3rem;
+    .control-indicator {
         width: 2rem;
         height: 2rem;
+        top: -0.5rem;
     }
 }
+
 .control-indicator {
     position: absolute;
     top: .15rem;
@@ -27,20 +31,20 @@
     height: 1rem;
     line-height: 1rem;
     font-size: 65%;
-    color: #eee;
+    color: #EEE;
     text-align: center;
-    background-color: #fff;
+    background-color: #FFF;
     background-size: 50% 50%;
     background-position: center center;
     background-repeat: no-repeat;
     pointer-events: none;
-    border:1px solid $color-slate;
+    border: 1px solid $color-slate;
 }
 
 .control input:checked ~ .control-indicator {
-    color: #fff;
+    color: #FFF;
     background-color: $color-primary;
-    border:none;
+    border: none;
 }
 
 // -----------

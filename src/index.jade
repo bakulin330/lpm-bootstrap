@@ -47,6 +47,10 @@ html(lang="ru", ng-app="app")
                 li
                     a(href="#form") Form
                 li
+                    a(href="#alert") Alert
+                li
+                    a(href="#breadcrumb") Breadcrumb
+                li
                     a(href="#colors") Colors
             div.l-float.tab-content(style="width:810px; margin-left:250px;")
 
@@ -79,12 +83,22 @@ html(lang="ru", ng-app="app")
                         div.col-s-6.col-m-4.col-l-3.col-xl-2
                             div.ex-col col-s-6 #[br] col-m-4 #[br] col-l-3 #[br] col-xl-2
                     xmp.code
-
                             |<div class="row">
                             |   <div class="col-s-6 col-m-4 col-l-3 col-xl-2"></div>
                             |   <div class="col-s-6 col-m-4 col-l-3 col-xl-2"></div>
                             |   <div class="col-s-6 col-m-4 col-l-3 col-xl-2"></div>
                             |</div>
+                    div.color-subtitle.font-xl.mt2 Table
+                    div.mt2 Таблица может быть с рамками, для этого нужно добавить класс .table-bordered
+                    xmp.code
+                        |<div class="table">
+                        |   <div class="t-row">
+                        |   <div class="t-cell"></div>
+                        |   <div class="t-cell"></div>
+                        |   <div class="t-cell"></div>
+                        |   </div>
+                        |</div>
+
                 div.lib-section.mt5
                     a(name="tabs")
                     div.color-title.font-xxl Tabs
@@ -137,6 +151,7 @@ html(lang="ru", ng-app="app")
                 div.lib-section.mt5
                     a(name="modal")
                     div.color-title.font-xxl Modal
+                    div.mt3.font-l 3 размера окон:
                     div.row.mt3(style="width:500px")
                         div.col-l-4
                             button.btn.btn-s.btn-default.btn-ghost.btn-round(onclick="$('html').addClass('wind-opened');$('#wind-container').show(); $('.wind-wrap').removeClass('hidden'); $('#wind-s').removeClass('hidden');") Small
@@ -230,7 +245,8 @@ html(lang="ru", ng-app="app")
                         |       </li>
                         |   </ul>
                         |</span>
-                    div.mt3 Есть ещё custom dropdown, при клике на него он не скрывается
+                    div.color-subtitle.font-xl.mt3 Custom dropdown
+                    div.mt1 При клике на custom-dropdown-menu выпадашка не скрывается
                     xmp.code
                         |<span class="custom-dropdown mt3">
                         |    <a class="btn custom-dropdown-btn">Custom dropdown<b class="caret"></b></a>
@@ -245,6 +261,9 @@ html(lang="ru", ng-app="app")
                     a(name="popover")
                     div.color-title.font-xxl Tooltip & Popover
                     div.color-subtitle.font-xl.mt3 Popover
+                    div.mt2 Поповер вызывается классом .has_popover
+                    div.mt1 data-content задаёт контент
+                    div.mt1 data-placement задаёт положение
                     div.row.mt3.example
                         div.col-l-3
                             div.popover.top
@@ -286,6 +305,7 @@ html(lang="ru", ng-app="app")
                     a(name="typography")
                     div.color-title.font-xxl Typography
                     div.color-subtitle.font-xl.mt2 Font-size
+                    div.color-subtitle.mt2 Классы от .font-xs, до .font-xxl
                     div.font-card.mt2
                         div.font-xxl.color-title Съешь ещё этих мягких французских булок, да выпей чаю
                         div.font-xxl.mt1.color-title The quick brown fox jumps over the lazy dog
@@ -318,10 +338,10 @@ html(lang="ru", ng-app="app")
 
                     div.font-xl.mt3 Link
                     div.mt2
-                        div Some #[a text and] link.
-                        div Some #[a(class="link-dark") text and] link.
-                        div Some #[a(class="link-light") text and] link.
-                        div Some #[a(class="link-negative") negative] link.
+                        div Some #[a link]
+                        div Some #[a(class="link-dark") link-dark]
+                        div Some #[a(class="link-light") link-light]
+                        div Some #[a(class="link-negative") link-negative]
                 div.mt5.lib-section
                     a(name="buttons")
                     div.color-title.font-xxl Buttons
@@ -451,12 +471,7 @@ html(lang="ru", ng-app="app")
                             div.mt3
                                     input.input-xl.input-disabled(value="Disabled input")
                                     button.btn-xl.btn-disabled.btn-primary.ml1 Disabled
-                            xmp.code
-                                |<input class="input" type="text">
-                                |<input class="input-s" type="text">
-                                |<input class="input-m" type="text">
-                                |<input class="input-l" type="text">
-                                |<input class="input-xl" type="text">
+
                         div.col-l-6
                                 div.font-xl.color-subtitle Select
                                 div.mt3
@@ -479,15 +494,22 @@ html(lang="ru", ng-app="app")
                                         option a
                                         option b
                                         option c
-                                xmp.code
-                                    |<select class="select" type="text"></select>
-                                    |<select class="select-s" type="text"></select>
-                                    |<select class="select-m" type="text"></select>
-                                    |<select class="select-l" type="text"></select>
-                                    |<select class="select-xl" type="text"></select>
+                    div.mt3 Класс .input равен .input-m
+                    xmp.code
+                        |<input class="input" type="text">
+                        |<input class="input-s" type="text">
+                        |<input class="input-m" type="text">
+                        |<input class="input-l" type="text">
+                        |<input class="input-xl" type="text">
+                    div.mt3 Класс .select равен .select-m
+                    xmp.code
+                        |<select class="select" type="text"></select>
+                        |<select class="select-s" type="text"></select>
+                        |<select class="select-m" type="text"></select>
+                        |<select class="select-l" type="text"></select>
+                        |<select class="select-xl" type="text"></select>
 
-                    div.row.mt3
-                        div.col-l-6
+                    div.mt3
                             div.font-xl.mt3.color-subtitle Round input
                             div.mt3
                                 input.input-m.input-round(placeholder="Плейсхолдер")
@@ -498,32 +520,32 @@ html(lang="ru", ng-app="app")
                                 button.btn.btn-m.btn-primary Кнопка
                             xmp.code
                                 |<div class="form-group-round" >
-                                |<input class="input input-round">
-                                |<button class="btn">Кнопка</button>
-                                |</div>
-                        div.col-l-6
-                            div.font-xl.mt3.color-subtitle Range
-                                div.range.mt3
-                                    div.range-bar
-                                    div.range-pointer(style="left:20%")
-                                    div.range-selected(style="left:0; width:20%;")
-                                div.range.mt2
-                                    div.range-bar
-                                    div.range-pointer(style="left:50%")
-                                    div.range-selected(style="left:0; width:50%;")
-                                div.range.mt2
-                                    div.range-bar
-                                    div.range-pointer(style="left:75%")
-                                    div.range-selected(style="left:0; width:75%;")
-                            xmp.code
-                                |<div class="range">
-                                |   <div class="range-bar"></div>
-                                |   <div style="left:20%" class="range-pointer"></div>
-                                |   <div style="left:0; width:20%;" class="range-selected"></div>
+                                |   <input class="input input-round">
+                                |   <button class="btn">Кнопка</button>
                                 |</div>
 
+                    div.font-xl.mt3.color-subtitle Range
+                        div.range.mt3
+                            div.range-bar
+                            div.range-pointer(style="left:20%")
+                            div.range-selected(style="left:0; width:20%;")
+                        div.range.mt2
+                            div.range-bar
+                            div.range-pointer(style="left:50%")
+                            div.range-selected(style="left:0; width:50%;")
+                        div.range.mt2
+                            div.range-bar
+                            div.range-pointer(style="left:75%")
+                            div.range-selected(style="left:0; width:75%;")
+                    xmp.code
+                        |<div class="range">
+                        |   <div class="range-bar"></div>
+                        |   <div style="left:20%" class="range-pointer"></div>
+                        |   <div style="left:0; width:20%;" class="range-selected"></div>
+                        |</div>
+
                     div.row.mt3
-                        div.col-l-6
+                        div.col-l-4
                             div.font-xl.mt3.color-subtitle Textarea
                             div.mt3
                                 div.mt2
@@ -546,6 +568,14 @@ html(lang="ru", ng-app="app")
                                     textarea.textarea-s.mt1.textarea-disabled(rows="2")
                                         | some text
                                         | etxt
+                        div.col-l-8
+                            xmp.code
+                                | <textarea class="textarea-s"></textarea>
+                                | <textarea class="textarea-m"></textarea>
+                                | <textarea class="textarea-l"></textarea>
+                                | <textarea class="textarea-xl"></textarea>
+                                | <textarea class="textarea-m textarea-disabled"></textarea>
+
                         div.col-l-6
                     div.row.mt3
                         div.col-l-6
@@ -556,17 +586,35 @@ html(lang="ru", ng-app="app")
                                         input(type="checkbox")
                                         span.control-indicator
                                         span Checkbox text
+                                div.mt2
+                                    label.checkbox.checkbox-l
+                                        input(type="checkbox")
+                                        span.control-indicator
+                                        span.font-xl Checkbox large
 
-                                div.mt1
+                                div.mt2
                                     label.radio
                                         input(type="radio" name="foo1")
                                         span.control-indicator
                                         span Checkbox text
 
-                                    label.radio
+                                    label.radio.ml3
                                         input(type="radio" name="foo1")
                                         span.control-indicator
                                         span Checkbox text
+                                xmp.code
+                                    |Checkbox
+                                    |<label class="checkbox">
+                                    |   <input type="checkbox">
+                                    |   <span class="control-indicator"></span>
+                                    |   <span>Checkbox text</span>
+                                    |</label>
+                                    | Radio
+                                    |<label class="radio">
+                                    |   <input type="radio" name="foo1">
+                                    |   <span class="control-indicator"></span>
+                                    |   <span>Radio text</span>
+                                    |</label>
                         div.col-l-6
                             div.font-xl.color-subtitle Switch
                             div.mt2
@@ -580,6 +628,57 @@ html(lang="ru", ng-app="app")
                                             div.font-l.color-subtitle.mb1 Mini
                                             div.switch.mini.on(onclick="$(this).toggleClass('on'); $(this).toggleClass('off');")
                                             div.switch.mini.off.ml1(onclick="$(this).toggleClass('on'); $(this).toggleClass('off');")
+
+                            xmp.code
+                                |<div class="switch on"></div>
+                                |<div class="switch mini on"></div>
+                    div.font-xl.color-subtitle.mt3 Input-append & input-prepend
+                        div.mt3
+                            div.input-append
+                                input.input.input-s
+                                span.add-on @
+                        div.mt2
+                            div.input-prepend
+                                span.add-on @
+                                input.input.input-s
+                        xmp.code
+                            |<div class="input-append">
+                            <input class="input input-s" type="text">
+                            <span class="add-on">@</span>
+                            </div>
+                            <div class="input-prepend">
+                            <span class="add-on">@</span>
+                            <input class="input input-s" type="text">
+                            </div>
+
+                div.mt5.lib-section.mb5
+                    a(name="alert")
+                    div.font-xxl.color-title Alert
+                        a(name="alert")
+                    div.table.mt3
+                        div.t-row
+                            div.t-cell.pr3
+                                div.alert .alert
+                            div.t-cell
+                                div.alert.alert-danger .alert.alert-danger
+                        div.t-row
+                            div.t-cell.pr3
+                                div.alert.alert-primary .alert.alert-primary
+                            div.t-cell
+                                div.alert.alert-info .alert.alert-info
+                        div.t-row
+                            div.t-cell.pr3
+                                div.alert.alert-success .alert.alert-success
+
+                div.mt5.lib-section.mb5
+                    a(name="breadcrumb")
+                    div.font-xxl.color-title Breadcrumb
+                        a(name="breadcrumb")
+                    ul.breadcrumb
+                        li
+                            a 1 страница
+                            span.divider /
+                        li.active 2 страница
 
                 div.mt5.lib-section.mb5
                     a(name="colors")

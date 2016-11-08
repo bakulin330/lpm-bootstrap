@@ -434,15 +434,11 @@
                 }
                 p {
                     margin: 0 0 10px 0;
-                    font-size: 13px;
                 }
                 .heading {
                     font-weight: bold;
-                    font-size: 14px;
+                    font-size: $font-l;
                     color: #37474F;
-                }
-                .message_footer {
-                    font-size: 13px;
                 }
                 .date {
                     font-size: 11px;
