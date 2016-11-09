@@ -99,6 +99,22 @@
             .pipe(reload({stream: true}));;
     });
 
+    gulp.task('build-editor', function () {
+        return gulp.src('src/build-editor.scss')
+            .pipe(sass({style: 'compressed'}).on('error', notify.onError(function (error) {
+                return 'Error: ' + error.message;
+            })))
+            .pipe(str2base64())
+            .pipe(concatCss('e.css'))
+            .pipe(prefixer({browsers: ['> 1%', 'last 4 versions', 'IE 7']}))
+            .pipe(prod || minify ? csso({
+                restructure: true,
+                debug: true
+            }) : gutil.noop())
+            .pipe(gulp.dest(path.build.base))
+            .pipe(reload({stream: true}));
+    });
+
     gulp.task('build:image', function () {
         return gulp.src(path.src.img)
             .pipe(imagemin({
