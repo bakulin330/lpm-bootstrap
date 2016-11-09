@@ -49,44 +49,44 @@ button::-moz-focus-inner, input[type=submit]::-moz-focus-inner, input[type=butto
     @extend .btn;
     font-size: $font-m;
     height: $base-button-height;
-    line-height: $base-button-height - 2px;
+    line-height: $base-button-height;
     padding: 0 $base-button-padding;
 }
 
-$btm-s-height: round(($base-button-height / $btn-multiplier)/2)*2;
+$btn-s-height: round(($base-button-height / $btn-multiplier)/2)*2;
 .btn-s {
     @extend .btn;
     font-size: $font-s;
-    height: $btm-s-height;
-    line-height: $btm-s-height - 2px;
-    padding: 0 ($btm-s-height/2);
+    height: $btn-s-height;
+    line-height: $btn-s-height;
+    padding: 0 ($btn-s-height/2);
 }
 
-$btm-xs-height: round(($base-button-height / $btn-multiplier / $btn-multiplier)/2)*2;
+$btn-xs-height: round(($base-button-height / $btn-multiplier / $btn-multiplier)/2)*2;
 .btn-xs {
     @extend .btn;
     font-size: $font-xs;
-    height: $btm-xs-height;
-    line-height: $btm-xs-height - 2px;
-    padding: 0 ($btm-xs-height/2);
+    height: $btn-xs-height;
+    line-height: $btn-xs-height;
+    padding: 0 ($btn-xs-height/2);
 }
 
-$btm-l-height: round(($base-button-height * $btn-multiplier)/2)*2;
+$btn-l-height: round(($base-button-height * $btn-multiplier)/2)*2;
 .btn-l {
     @extend .btn;
     font-size: $font-l;
-    height: $btm-l-height;
-    line-height: $btm-l-height - 2px;
-    padding: 0 ($btm-l-height / 2);
+    height: $btn-l-height;
+    line-height: $btn-l-height;
+    padding: 0 ($btn-l-height / 2);
 }
 
-$btm-xl-height: round(($base-button-height * $btn-multiplier * $btn-multiplier)/2)*2;
+$btn-xl-height: round(($base-button-height * $btn-multiplier * $btn-multiplier)/2)*2;
 .btn-xl {
     @extend .btn;
     font-size: $font-xl;
-    height: $btm-xl-height;
-    line-height: $btm-xl-height - 2px;
-    padding: 0 ($btm-xl-height / 2);
+    height: $btn-xl-height;
+    line-height: $btn-xl-height;
+    padding: 0 ($btn-xl-height / 2);
     //    box-shadow: inset 0 -3px 0 rgba(31,45,61,0.3);
 }
 
@@ -334,6 +334,21 @@ $btm-xl-height: round(($base-button-height * $btn-multiplier * $btn-multiplier)/
     background: transparent;
     border: 1px solid $btn-ghost-border;
     text-shadow: none;
+    &.btn-xs{
+        line-height:$btn-xs-height - 2px;
+    }
+    &.btn-s{
+        line-height:$btn-s-height - 2px;
+    }
+    &.btn-m{
+        line-height:$base-button-height - 2px;
+    }
+    &.btn-l{
+        line-height:$btn-l-height - 2px;
+    }
+    &.btn-xl{
+        line-height:$btn-xl-height - 2px;
+    }
 
     &:hover {
         color: #FFF;
