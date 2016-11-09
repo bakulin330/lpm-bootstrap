@@ -1,0 +1,21 @@
+body,
+.btn,
+.btn-group > .btn,
+label{
+    font-size: 15px;
+}
+
+#bs_top_menu_wrap,
+.left_side_panel,
+#bs_bottom_editor,
+#wind_container,
+button,
+select,
+textarea,
+#popup_list{
+    font-family: $base-font-family;
+}
+
+.wind .wind-close:hover > div {
+    background-position: 0;
+}
