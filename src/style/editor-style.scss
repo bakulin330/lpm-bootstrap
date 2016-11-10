@@ -1,8 +1,17 @@
-body,
-.btn,
-.btn-group > .btn,
-label{
+#bs_top_menu_wrap,
+.left_side_panel,
+#bs_bottom_editor,
+#wind_container {
     font-size: 15px;
+    .btn,
+    .btn-group > .btn,
+    label {
+        font-size: 15px;
+    }
+    .btn-small{
+        font-size:12px;
+        padding-top: 5px;
+    }
 }
 
 #bs_top_menu_wrap,
@@ -12,7 +21,7 @@ label{
 button,
 select,
 textarea,
-#popup_list{
+#popup_list {
     font-family: $base-font-family;
 }
 
