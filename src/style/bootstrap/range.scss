@@ -1,0 +1,51 @@
+.ui-slider-horizontal{
+    height: 7px;
+}
+.ui-widget-content{
+    background: $color-silver;
+}
+.ui-slider.ui-corner-all{
+    border-radius:0;
+}
+.ui-slider .ui-widget-header{
+    background-color: $color-primary;
+}
+.ui-slider .ui-slider-handle{
+    width: 12px;
+    height: 20px;
+}
+//.slider {
+//    position: relative;
+//    cursor: pointer;
+//    .range-bar {
+//
+//
+//    }
+//    .range-pointer {
+//        position: absolute;
+//        top: -7px;
+//        left: 60%;
+//        z-index: 2;
+//        width: 12px;
+//        height: 20px;
+//        -webkit-box-sizing: border-box;
+//        -moz-box-sizing: border-box;
+//        box-sizing: border-box;
+//        background-color: #FFF;
+//        border: 1px solid $color-slate;
+//        @include border-radius(2px);
+//        @include transform(translate(-50%, 0));
+//        @include box-shadow(0px 0px 5px rgba(0, 0, 0, 0.1));
+//        &:hover {
+//            background-color: $color-snow;
+//        }
+//    }
+//    .range-selected {
+//        position: absolute;
+//        top: 0;
+//        width: 60%;
+//        height: 7px;
+//        overflow: hidden;
+//        background-color: $color-primary;
+//    }
+//}

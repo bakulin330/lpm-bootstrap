@@ -8,8 +8,8 @@
     label {
         font-size: 15px;
     }
-    .btn-small{
-        font-size:12px;
+    .btn-small {
+        font-size: 12px;
         padding-top: 5px;
     }
 }
@@ -23,6 +23,7 @@ select,
 textarea,
 #popup_list {
     font-family: $base-font-family;
+    color: $color-text;
 }
 
 .wind .wind-close:hover > div {

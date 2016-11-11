@@ -68,7 +68,7 @@ $wind-close-padding: (1*$step);
         font-size: $font-l;
         color: $color-title;
         text-align: center;
-        border-bottom: 1px solid $color-default;
+        border-bottom: 1px solid $color-slate;
         line-height: 1;
         position: relative;
         @include border-top-radius($base-border-radius);
@@ -191,7 +191,7 @@ html.wind_opened {
     font-size: $font-l;
     color: $color-title;
     text-align: center;
-    border-bottom: 1px solid $color-default;
+    border-bottom: 1px solid $color-slate;
     line-height: 1;
     position: relative;
     @include border-top-radius($base-border-radius);
