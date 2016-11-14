@@ -1,18 +1,21 @@
-.ui-slider-horizontal{
+.slider.ui-slider-horizontal{
     height: 7px;
 }
-.ui-widget-content{
+.slider.ui-widget-content{
     background: $color-silver;
 }
-.ui-slider.ui-corner-all{
+.slider.ui-slider.ui-corner-all{
     border-radius:0;
 }
-.ui-slider .ui-widget-header{
+
+.slider.ui-slider .ui-widget-header{
     background-color: $color-primary;
+    border-radius:0;
 }
-.ui-slider .ui-slider-handle{
+.slider.ui-slider .ui-slider-handle{
     width: 12px;
     height: 20px;
+    top: -7px;
 }
 //.slider {
 //    position: relative;

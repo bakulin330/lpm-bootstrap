@@ -55,6 +55,7 @@
             background: #e1e4e4;;
             opacity:.9;
             @include border-top-radius($base-border-radius);
+            cursor:pointer;
             &:hover {
                 background: #d4d7d8;
                 opacity:1;
