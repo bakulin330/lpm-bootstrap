@@ -52,8 +52,9 @@
             margin-right: 2px;
             line-height: $base-line-height;
             border: 1px solid transparent;
-            background: #e1e4e4;;
+            //background: #e1e4e4;;
             opacity:.9;
+            color:$color-blue;
             @include border-top-radius($base-border-radius);
             cursor:pointer;
             &:hover {

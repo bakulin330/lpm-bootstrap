@@ -1,7 +1,8 @@
 #bs_top_menu_wrap,
 .left_side_panel,
 #bs_bottom_editor,
-#wind_container {
+#wind_container,
+.lpm-popover{
     font-size: 15px;
     .btn,
     .btn-group > .btn,
@@ -21,7 +22,8 @@
 button,
 select,
 textarea,
-#popup_list {
+#popup_list,
+.lpm-popover{
     font-family: $base-font-family;
     color: $color-text;
 }
