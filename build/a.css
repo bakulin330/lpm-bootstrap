@@ -331,8 +331,8 @@
 
 @font-face {
   font-family: CirceWebRegular;
-  src: url("../../../../../web/fonts/circle/circle-regular.eot");
-  src: url("../../../../../web/fonts/circle/circle-regular.eot") format("embedded-opentype"), url("../../../../../web/fonts/circle/circle-regular.woff2") format("woff2"), url("../../../../../web/fonts/circle/circle-regular.woff") format("woff"), url("../../../../../web/fonts/circle/circle-regular.ttf") format("truetype"), url("../../../../../web/fonts/circle/circle-regular.svg") format("svg");
+  src: url("../../../../web/fonts/circle/circle-regular.eot");
+  src: url("../../../../web/fonts/circle/circle-regular.eot") format("embedded-opentype"), url("../../../../web/fonts/circle/circle-regular.woff2") format("woff2"), url("../../../../web/fonts/circle/circle-regular.woff") format("woff"), url("../../../../web/fonts/circle/circle-regular.ttf") format("truetype"), url("../../../../web/fonts/circle/circle-regular.svg") format("svg");
   font-weight: 400;
   font-style: normal;
 }
