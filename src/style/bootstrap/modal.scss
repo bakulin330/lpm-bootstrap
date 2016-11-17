@@ -34,8 +34,8 @@ $wind-close-padding: (1*$step);
     @include box-shadow(0 3px 30px rgba(0, 0, 0, .5));
     @include border-radius($base-border-radius);
     width: 700px;
-    &.iblk:first-child{
-        margin-top:100px;
+    &.iblk:first-child {
+        margin-top: 100px;
         .iblk_header h5 {
             padding-left: 30px;
         }
@@ -83,7 +83,7 @@ $wind-close-padding: (1*$step);
         right: (2*$step);
         margin-top: -($wind-close-padding + $wind-close-inner-size/2);
         @include border-radius(50%);
-        z-index:2;
+        z-index: 2;
 
         > div {
             background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAALVBMVEUAAAA3SU83R045R1U3SFA3R1A2R089SVU3Rk8zTU03R083R042Q1E3R083R08Gf0yjAAAADnRSTlMAKrYSvc3OFdIU0dATz5UJOWkAAABkSURBVHgBhdJLDoAgDAbhH4qID3v/41qT7iaNLudLUGnVugmP9abhG8SmD+3Lp6GvQ5ToZ/QUdEj065Yg2SHZIdGf6JCvB1NmHghhJ/wfxZfXn8sfRIfwEsXOcUCq0dbLUK3PC6MfBoUe3cfsAAAAAElFTkSuQmCC);
@@ -215,7 +215,7 @@ html.wind_opened {
     right: (2*$step);
     margin-top: -($wind-close-padding + $wind-close-inner-size/2);
     @include border-radius(50%);
-    z-index:2;
+    z-index: 2;
 
     > div {
         background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAALVBMVEUAAAA3SU83R045R1U3SFA3R1A2R089SVU3Rk8zTU03R083R042Q1E3R083R08Gf0yjAAAADnRSTlMAKrYSvc3OFdIU0dATz5UJOWkAAABkSURBVHgBhdJLDoAgDAbhH4qID3v/41qT7iaNLudLUGnVugmP9abhG8SmD+3Lp6GvQ5ToZ/QUdEj065Yg2SHZIdGf6JCvB1NmHghhJ/wfxZfXn8sfRIfwEsXOcUCq0dbLUK3PC6MfBoUe3cfsAAAAAElFTkSuQmCC);
@@ -266,19 +266,40 @@ html.wind_opened {
 
 .plug_modal .modal-body {
     padding: 0 30px;
-    max-height:350px;
+    max-height: 350px;
 }
-#modal_module_success .modal-body{
-    padding:0;
+
+#modal_module_success .modal-body {
+    padding: 0;
 }
+
 #jConfirm,
-#jAlert{
-    .wind-footer{
-        text-align:center;
-        .btn{
+#jAlert {
+    .wind-footer {
+        text-align: center;
+        .btn {
             display: inline-block;
             float: none;
         }
 
     }
+}
+
+//Удалить после слияния 862
+#wind_container {
+
+    #jConfirm,
+    #jAlert {
+        #jAlertBody {
+            padding: 30px 40px 0 40px !important;
+        }
+        .ibtn-blue {
+            @extend .btn-primary;
+        }
+        .wind-close {
+            right: 20px;
+            top: 35px;
+        }
+    }
+
 }

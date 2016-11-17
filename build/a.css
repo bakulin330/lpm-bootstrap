@@ -1290,7 +1290,12 @@ table.general > thead > tr > th {
   margin-right: 20px;
 }
 
-.wind .wind-footer .btn-primary {
+.wind .wind-footer .btn-primary,
+.wind .wind-footer #wind_container #jConfirm .ibtn-blue,
+#wind_container #jConfirm .wind .wind-footer .ibtn-blue,
+.wind .wind-footer
+    #wind_container #jAlert .ibtn-blue,
+#wind_container #jAlert .wind .wind-footer .ibtn-blue {
   min-width: 130px;
 }
 
@@ -1485,6 +1490,17 @@ html.wind_opened {
 #jAlert .wind-footer .btn-xl {
   display: inline-block;
   float: none;
+}
+
+#wind_container #jConfirm #jAlertBody,
+#wind_container #jAlert #jAlertBody {
+  padding: 30px 40px 0 40px !important;
+}
+
+#wind_container #jConfirm .wind-close,
+#wind_container #jAlert .wind-close {
+  right: 20px;
+  top: 35px;
 }
 
 .input,
@@ -2754,20 +2770,32 @@ input[type=button]::-moz-focus-inner {
   box-shadow: none;
 }
 
-.btn-primary {
+.btn-primary,
+#wind_container #jConfirm .ibtn-blue,
+#wind_container #jAlert .ibtn-blue {
   background: #62a8ea;
   color: #FFF;
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+#wind_container #jConfirm .ibtn-blue:hover,
+#wind_container #jAlert .ibtn-blue:hover {
   background: #89BCEB;
   color: #FFF;
 }
 
 .btn-primary:active,
+#wind_container #jConfirm .ibtn-blue:active,
+#wind_container #jAlert .ibtn-blue:active,
 .btn-primary.active,
+#wind_container #jConfirm .active.ibtn-blue,
+#wind_container #jAlert .active.ibtn-blue,
 .btn-primary.active:hover,
-.btn-primary:active:hover {
+#wind_container #jConfirm .active.ibtn-blue:hover,
+#wind_container #jAlert .active.ibtn-blue:hover,
+.btn-primary:active:hover,
+#wind_container #jConfirm .ibtn-blue:active:hover,
+#wind_container #jAlert .ibtn-blue:active:hover {
   background: #4E97D9;
   color: #FFF;
 }
@@ -2923,8 +2951,14 @@ input[type=button]::-moz-focus-inner {
 }
 
 .btn-ghost.btn-primary:hover,
+#wind_container #jConfirm .btn-ghost.ibtn-blue:hover,
+#wind_container #jAlert .btn-ghost.ibtn-blue:hover,
 .btn-ghost.btn-primary:active,
-.btn-ghost.btn-primary.active {
+#wind_container #jConfirm .btn-ghost.ibtn-blue:active,
+#wind_container #jAlert .btn-ghost.ibtn-blue:active,
+.btn-ghost.btn-primary.active,
+#wind_container #jConfirm .btn-ghost.active.ibtn-blue,
+#wind_container #jAlert .btn-ghost.active.ibtn-blue {
   border-color: #62a8ea;
   background: #62a8ea;
 }
