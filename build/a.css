@@ -440,9 +440,9 @@ a {
 
 .ui_required {
   color: #f96868;
-  font-size: 125%;
   line-height: 1px;
   cursor: help;
+  font-family: Tahoma, sans-serif;
 }
 
 .ui_error {
