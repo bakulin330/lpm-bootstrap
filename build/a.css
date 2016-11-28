@@ -435,7 +435,7 @@ a {
 }
 
 .color-hint {
-  color: #A3AFB7;
+  color: #76838F;
 }
 
 .ui_required {
@@ -1608,7 +1608,7 @@ select:focus {
 
 .input-disabled,
 .textarea-disabled {
-  color: #A3AFB7;
+  color: #76838F;
   border: 1px solid #A3AFB7;
   background-color: #FAFAFA;
   pointer-events: none;
@@ -2689,7 +2689,7 @@ input[type=button]::-moz-focus-inner {
   top: 0 !important;
   cursor: default;
   background: #F5F5F5;
-  color: #A3AFB7;
+  color: #76838F;
   text-shadow: none;
   box-shadow: none;
 }
@@ -2755,7 +2755,7 @@ input[type=button]::-moz-focus-inner {
 .btn-xl.btn-loading:active:hover,
 .btn.btn-loading:active:hover {
   background: #F5F5F5;
-  color: #A3AFB7;
+  color: #76838F;
 }
 
 .btn-loading {
