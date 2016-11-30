@@ -331,14 +331,18 @@
 
 @font-face {
   font-family: CirceWebRegular;
-  src: url("../../../../web/fonts/circle/circle-regular.eot");
-  src: url("../../../../web/fonts/circle/circle-regular.eot") format("embedded-opentype"), url("../../../../web/fonts/circle/circle-regular.woff2") format("woff2"), url("../../../../web/fonts/circle/circle-regular.woff") format("woff"), url("../../../../web/fonts/circle/circle-regular.ttf") format("truetype"), url("../../../../web/fonts/circle/circle-regular.svg") format("svg");
+  src: url("../../../../../web/fonts/circle/circle-regular.eot");
+  src: url("../../../../../web/fonts/circle/circle-regular.eot") format("embedded-opentype"), url("../../../../../web/fonts/circle/circle-regular.woff2") format("woff2"), url("../../../../../web/fonts/circle/circle-regular.woff") format("woff"), url("../../../../../web/fonts/circle/circle-regular.ttf") format("truetype"), url("../../../../../web/fonts/circle/circle-regular.svg") format("svg");
   font-weight: 400;
   font-style: normal;
 }
 
-body {
+html {
   font-size: 15px;
+}
+
+body {
+  font-size: 1rem;
   font-family: "CirceWebRegular", "Open Sans", Arial, Helvetica, sans-serif;
   line-height: 1.4;
   cursor: default;
@@ -357,27 +361,27 @@ ul li {
 }
 
 .font-xxl {
-  font-size: 195.3125%;
+  font-size: 1.728rem;
 }
 
 .font-xl {
-  font-size: 156.25%;
+  font-size: 1.44rem;
 }
 
 .font-l {
-  font-size: 125%;
+  font-size: 1.2rem;
 }
 
 .font-m {
-  font-size: 15px;
+  font-size: 1rem;
 }
 
 .font-s {
-  font-size: 80%;
+  font-size: 0.83rem;
 }
 
 .font-xs {
-  font-size: 64%;
+  font-size: 0.694rem;
 }
 
 a {
@@ -447,7 +451,7 @@ a {
 
 .ui_error {
   color: #f96868;
-  font-size: 80%;
+  font-size: 0.83rem;
 }
 
 * {
@@ -1209,7 +1213,7 @@ table.general > thead > tr > th {
 .wind .wind-header {
   padding: 30px 40px;
   background: #F5F5F5;
-  font-size: 125%;
+  font-size: 1.2rem;
   color: #37474F;
   text-align: center;
   border-bottom: 1px solid #CCC;
@@ -1361,7 +1365,7 @@ html.wind_opened {
 .modal-header {
   padding: 30px 40px;
   background: #F5F5F5;
-  font-size: 125%;
+  font-size: 1.2rem;
   color: #37474F;
   text-align: center;
   border-bottom: 1px solid #CCC;
@@ -1526,7 +1530,7 @@ select {
   border: 1px solid #A3AFB7;
   width: 200px;
   font-family: "CirceWebRegular", "Open Sans", Arial, Helvetica, sans-serif;
-  font-size: 15px;
+  font-size: 1rem;
   height: 40px;
   padding: 0 14px;
 }
@@ -1558,50 +1562,50 @@ select:focus {
 }
 
 .input-m {
-  font-size: 15px;
+  font-size: 1rem;
   height: 40px;
   padding: 0 14px;
 }
 
 .textarea-m {
-  font-size: 15px;
+  font-size: 1rem;
   padding: 9.33333px 14px;
   line-height: 1.5;
   min-height: 70px;
 }
 
 .input-s {
-  font-size: 80%;
+  font-size: 0.83rem;
   height: 32px;
   padding: 0 11px;
 }
 
 .textarea-s {
-  font-size: 80%;
+  font-size: 0.83rem;
   padding: 7.33333px 11px;
   line-height: 1.5;
 }
 
 .input-l {
-  font-size: 125%;
+  font-size: 1.2rem;
   height: 50px;
   padding: 0 18px;
 }
 
 .textarea-l {
-  font-size: 125%;
+  font-size: 1.2rem;
   padding: 12px 18px;
   line-height: 1.5;
 }
 
 .input-xl {
-  font-size: 156.25%;
+  font-size: 1.44rem;
   height: 62px;
   padding: 0 22px;
 }
 
 .textarea-xl {
-  font-size: 156.25%;
+  font-size: 1.44rem;
   padding: 14.66667px 22px;
   line-height: 1.5;
 }
@@ -1697,25 +1701,25 @@ select:focus {
 }
 
 select.select-s {
-  font-size: 80%;
+  font-size: 0.83rem;
   height: 32px;
   padding: 0 11px;
 }
 
 select.select-m {
-  font-size: 15px;
+  font-size: 1rem;
   height: 40px;
   padding: 0 14px;
 }
 
 select.select-l {
-  font-size: 125%;
+  font-size: 1.2rem;
   height: 50px;
   padding: 0 18px;
 }
 
 select.select-xl {
-  font-size: 156.25%;
+  font-size: 1.44rem;
   height: 62px;
   padding: 0 22px;
 }
@@ -2078,12 +2082,12 @@ select.select-xl {
   border-radius: 4px;
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.17);
   background-clip: padding-box;
-  font-size: 80%;
+  font-size: 0.83rem;
 }
 
 .popover .popover-title {
   padding: 3px 13px;
-  font-size: 125%;
+  font-size: 1.2rem;
 }
 
 .popover.top {
@@ -2640,7 +2644,7 @@ input[type=button]::-moz-focus-inner {
   font-family: "CirceWebRegular", "Open Sans", Arial, Helvetica, sans-serif;
   position: relative;
   text-shadow: 0 1px rgba(0, 0, 0, 0.1);
-  font-size: 15px;
+  font-size: 1rem;
   height: 40px;
   line-height: 40px;
   padding: 0 20px;
@@ -2657,35 +2661,35 @@ input[type=button]::-moz-focus-inner {
 }
 
 .btn-m {
-  font-size: 15px;
+  font-size: 1rem;
   height: 40px;
   line-height: 40px;
   padding: 0 20px;
 }
 
 .btn-s {
-  font-size: 80%;
+  font-size: 0.83rem;
   height: 32px;
   line-height: 32px;
   padding: 0 16px;
 }
 
 .btn-xs {
-  font-size: 64%;
+  font-size: 0.694rem;
   height: 26px;
   line-height: 26px;
   padding: 0 13px;
 }
 
 .btn-l {
-  font-size: 125%;
+  font-size: 1.2rem;
   height: 50px;
   line-height: 50px;
   padding: 0 25px;
 }
 
 .btn-xl {
-  font-size: 156.25%;
+  font-size: 1.44rem;
   height: 62px;
   line-height: 62px;
   padding: 0 31px;
@@ -3476,7 +3480,7 @@ input[type=button]::-moz-focus-inner {
 .navbar .whats_new .inbox_header_text {
   line-height: 50px;
   font-weight: bold;
-  font-size: 125%;
+  font-size: 1.2rem;
   color: #37474F;
 }
 
@@ -3486,7 +3490,7 @@ input[type=button]::-moz-focus-inner {
   right: 25px;
   line-height: 50px;
   color: #BBB;
-  font-size: 15px;
+  font-size: 1rem;
   text-decoration: underline;
 }
 
@@ -3570,7 +3574,7 @@ input[type=button]::-moz-focus-inner {
 
 .navbar .whats_new .inbox_messages .message .heading {
   font-weight: bold;
-  font-size: 125%;
+  font-size: 1.2rem;
   color: #37474F;
 }
 
@@ -3944,7 +3948,7 @@ i.fa {
   margin: 100px auto;
   padding: 25px;
   color: #37474F;
-  font-size: 125%;
+  font-size: 1.2rem;
   border-radius: 4px;
   text-align: center;
   line-height: 1.4;
@@ -3986,7 +3990,7 @@ i.fa {
 }
 
 .notify_overlay .overlay_title {
-  font-size: 195.3125%;
+  font-size: 1.728rem;
   color: #37474F;
   margin-bottom: 20px;
   line-height: 1.1;
@@ -4624,7 +4628,7 @@ i.fa {
 
 .home .code {
   background: #E4EAEC;
-  font-size: 15px;
+  font-size: 1rem;
   padding: 30px;
   margin-top: 30px;
   border: 1px solid #ccc;

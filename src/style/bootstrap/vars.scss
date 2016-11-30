@@ -8,12 +8,3 @@ $base-line-height: 1.4;
 $base-font-family: "CirceWebRegular", "Open Sans", Arial, Helvetica, sans-serif;
 $base-border-radius: 4px;
 $top-menu-height: 55px;$font-m: $base-font-size;
-
-// --------------
-$font-l: percentage($multiplier);
-$font-xl: percentage($multiplier * $multiplier);
-$font-xxl: percentage($multiplier * $multiplier * $multiplier);
-
-$font-s: percentage(1 / $multiplier);
-$font-xs: percentage(1 / $multiplier / $multiplier);
-// --------------
