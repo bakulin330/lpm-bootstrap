@@ -55,6 +55,20 @@
     .control-indicator {
         @include border-radius(2px);
     }
+    &.checkbox-disabled {
+        cursor: default;
+        .control-indicator {
+            background-color: $color-snow;
+        }
+        input:checked {
+            & ~ .control-indicator {
+                background-color: $color-snow;
+                border: 1px solid  $color-slate;
+            }
+        }
+
+    }
+
 }
 
 .checkbox input:checked ~ .control-indicator {

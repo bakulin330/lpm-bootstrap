@@ -111,6 +111,15 @@ $input-xl-padding: round($input-xl-height * $input-padding-miltiplier);
     @include no-select;
 }
 
+.select-disabled {
+    color: $color-hint;
+    border: 1px solid $color-gray;
+    background-color: $color-snow;
+    pointer-events: none;
+    cursor: default;
+    @include no-select;
+}
+
 .textarea-disabled {
     @extend .input-disabled;
     resize: none;
@@ -246,10 +255,12 @@ select {
             color: $color-success;
         }
     }
+    &.switch-disabled {
+        background: $color-snow;
+        cursor:default;
+    }
 
 }
-
-
 
 .input-vertical {
     margin-top: 5px;

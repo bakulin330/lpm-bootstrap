@@ -435,7 +435,7 @@ html(lang="ru", ng-app="app")
                     div.mt3
                         div.btn-group
                             button.btn.btn-m.btn-primary Default
-                            button.btn.btn-m.btn-primary Default
+                            button.btn.btn-m.btn-primary.active Default
                             button.btn.btn-m.btn-primary Default
                         //div.btn-group.ml3
                         //    button.btn.base-button.btn-m.btn-primary.btn-round Default
@@ -470,7 +470,7 @@ html(lang="ru", ng-app="app")
                                 button.btn-xl.btn-primary.ml1 Default
                             div.mt3
                                     input.input-xl.input-disabled(value="Disabled input")
-                                    button.btn-xl.btn-disabled.btn-primary.ml1 Disabled
+                                    button.btn-xl.disabled.btn-primary.ml1 Disabled
 
                         div.col-l-6
                                 div.font-xl.color-subtitle Select
@@ -492,6 +492,11 @@ html(lang="ru", ng-app="app")
                                 div.mt3
                                     select.select-xl
                                         option a
+                                        option b
+                                        option c
+                                div.mt3
+                                    select.select-xl.select-disabled
+                                        option Disabled
                                         option b
                                         option c
                     div.mt3 Класс .input равен .input-m
@@ -587,6 +592,11 @@ html(lang="ru", ng-app="app")
                                         span.control-indicator
                                         span Checkbox text
                                 div.mt2
+                                    label.checkbox.checkbox-disabled
+                                        input(type="checkbox")
+                                        span.control-indicator
+                                        span Checkbox disabled
+                                div.mt2
                                     label.checkbox.checkbox-l
                                         input(type="checkbox")
                                         span.control-indicator
@@ -624,6 +634,9 @@ html(lang="ru", ng-app="app")
                                             div.font-l.color-subtitle.mb1 Normal
                                             div.switch.on(onclick="$(this).toggleClass('on'); $(this).toggleClass('off');")
                                             div.switch.off.ml1(onclick="$(this).toggleClass('on'); $(this).toggleClass('off');")
+                                        div.t-cell
+                                            div.font-l.color-subtitle.mb1 Disabled
+                                            div.switch.off.switch-disabled
                                         div.t-cell
                                             div.font-l.color-subtitle.mb1 Mini
                                             div.switch.mini.on(onclick="$(this).toggleClass('on'); $(this).toggleClass('off');")

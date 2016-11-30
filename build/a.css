@@ -1620,6 +1620,19 @@ select:focus {
   user-select: none;
 }
 
+.select-disabled {
+  color: #76838F;
+  border: 1px solid #A3AFB7;
+  background-color: #FAFAFA;
+  pointer-events: none;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .textarea-disabled {
   resize: none;
 }
@@ -1812,6 +1825,11 @@ select.select-xl {
   color: #46BE8A;
 }
 
+.switch.switch-disabled {
+  background: #FAFAFA;
+  cursor: default;
+}
+
 .input-vertical {
   margin-top: 5px;
 }
@@ -1987,6 +2005,19 @@ select.select-xl {
 
 .checkbox .control-indicator {
   border-radius: 2px;
+}
+
+.checkbox.checkbox-disabled {
+  cursor: default;
+}
+
+.checkbox.checkbox-disabled .control-indicator {
+  background-color: #FAFAFA;
+}
+
+.checkbox.checkbox-disabled input:checked ~ .control-indicator {
+  background-color: #FAFAFA;
+  border: 1px solid #CCC;
 }
 
 .checkbox input:checked ~ .control-indicator {
