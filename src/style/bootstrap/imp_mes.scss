@@ -1,0 +1,64 @@
+#important-messages {
+    position: fixed;
+    z-index: 9999999999;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.7);
+    overflow-y: scroll;
+}
+
+#important-messages > table {
+    width: 100%;
+    height: 100%;
+}
+
+#important-messages > table > tr > td {
+    vertical-align: middle;
+}
+
+#imp-mes-wrap {
+    padding: 20px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.9);
+    margin: 20px auto;
+    width: 400px;
+    box-shadow: 0 0 20px #444;
+}
+
+#imp-mes-btn {
+    display: block;
+    margin: 0 auto;
+    width: 80px;
+    border-radius: 4px;
+    background: #49A1D0;
+    color: #FFF;
+    padding: 4px 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+#imp-mes-list .imp-mes {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    border-bottom: 1px solid #DDD;
+}
+
+#imp-mes-list .imp-mes:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+#imp-mes-list .date {
+    font-weight: bold;
+    font-family: "Trebuchet MS", Trebuchet, sans-serif;
+    font-size: 14px;
+}
+
+#imp-mes-list .mes {
+    font-size: 16px;
+    color: #555;
+}
