@@ -80,7 +80,7 @@ $wind-close-padding: (1*$step);
         position: absolute;
         cursor: pointer;
         top: 50%;
-        right: (2*$step);
+        right: 23px;
         margin-top: -($wind-close-padding + $wind-close-inner-size/2);
         @include border-radius(50%);
         z-index: 2;

@@ -1233,7 +1233,7 @@ table.general > thead > tr > th {
   position: absolute;
   cursor: pointer;
   top: 50%;
-  right: 20px;
+  right: 23px;
   margin-top: -17px;
   border-radius: 50%;
   z-index: 2;
