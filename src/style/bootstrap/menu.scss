@@ -640,7 +640,7 @@
 .navbar-app {
     position: fixed;
     top: 45px;
-    left: 27px;
+    left: 130px;
     width: 515px;
     background: #FAFAFA;
     margin: auto;
@@ -802,9 +802,14 @@
     font-size: 16px;
     cursor: pointer;
     margin-top: 9px;
-    .top-menu-single-item__brand {
+    display:inline-block;
+    float:left;
+    .top-menu-single-item__brand,
+    .top-menu-single-item__brand:hover {
         display: inline-block;
-        color: #FFF;
+        color: rgba(255, 255, 255, 0.9);
+        text-decoration: none;
+        cursor: pointer;
     }
     .top-menu-single-item__link {
         padding: 8px 18px;

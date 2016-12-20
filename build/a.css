@@ -3773,7 +3773,7 @@ input[type=button]::-moz-focus-inner {
 .navbar-app {
   position: fixed;
   top: 45px;
-  left: 27px;
+  left: 130px;
   width: 515px;
   background: #FAFAFA;
   margin: auto;
@@ -3950,11 +3950,16 @@ input[type=button]::-moz-focus-inner {
   font-size: 16px;
   cursor: pointer;
   margin-top: 9px;
+  display: inline-block;
+  float: left;
 }
 
-.top-menu-single-item .top-menu-single-item__brand {
+.top-menu-single-item .top-menu-single-item__brand,
+.top-menu-single-item .top-menu-single-item__brand:hover {
   display: inline-block;
-  color: #FFF;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .top-menu-single-item .top-menu-single-item__link {
