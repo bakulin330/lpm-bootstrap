@@ -3960,6 +3960,7 @@ input[type=button]::-moz-focus-inner {
   color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
   cursor: pointer;
+  padding-right: 10px;
 }
 
 .top-menu-single-item .top-menu-single-item__link {
