@@ -8,39 +8,17 @@
   border: 1px solid #E4EAEC;
 }
 
-@-webkit-keyframes spin {
-  from {
-    -webkit-transform: rotate(0deg);
-  }
-
-  to {
-    -webkit-transform: rotate(360deg);
-  }
-}
-
 @keyframes spin {
   from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 
   to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 @keyframes loading-stripes {
-  from {
-    background-position: 50px 0;
-  }
-
-  to {
-    background-position: 0 0;
-  }
-}
-
-@-webkit-keyframes loading-stripes {
   from {
     background-position: 50px 0;
   }
@@ -329,21 +307,13 @@
   }
 }
 
-@font-face {
-  font-family: CirceWebRegular;
-  src: url("../../../../web/fonts/circle/circle-regular.eot");
-  src: url("../../../../web/fonts/circle/circle-regular.eot") format("embedded-opentype"), url("../../../../web/fonts/circle/circle-regular.woff2") format("woff2"), url("../../../../web/fonts/circle/circle-regular.woff") format("woff"), url("../../../../web/fonts/circle/circle-regular.ttf") format("truetype"), url("../../../../web/fonts/circle/circle-regular.svg") format("svg");
-  font-weight: 400;
-  font-style: normal;
-}
-
 html {
   font-size: 15px;
 }
 
 body {
   font-size: 1rem;
-  font-family: "CirceWebRegular", "Open Sans", Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
   line-height: 1.4;
   cursor: default;
   color: #37474F;
@@ -1252,7 +1222,6 @@ table.general > thead > tr > th {
   -khtml-opacity: 0.6;
   opacity: 0.6;
   background-repeat: no-repeat;
-  -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
 
@@ -1325,7 +1294,6 @@ html.wind_opened {
 
 .fade {
   opacity: 0;
-  -webkit-transition: opacity 0.15s linear;
   transition: opacity 0.15s linear;
 }
 
@@ -1353,7 +1321,6 @@ html.wind_opened {
 }
 
 .modal.fade {
-  -webkit-transition: opacity .3s linear, top .3s ease-out;
   transition: opacity .3s linear, top .3s ease-out;
   top: -25%;
 }
@@ -1414,7 +1381,6 @@ html.wind_opened {
   -khtml-opacity: 0.6;
   opacity: 0.6;
   background-repeat: no-repeat;
-  -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
 
@@ -1522,14 +1488,13 @@ select {
   background-color: #FFF;
   display: inline-block;
   outline: none;
-  -webkit-transition: all 80ms linear;
   transition: all 80ms linear;
   vertical-align: middle;
   -webkit-font-smoothing: antialiased;
   line-height: 1;
   border: 1px solid #A3AFB7;
   width: 200px;
-  font-family: "CirceWebRegular", "Open Sans", Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-size: 1rem;
   height: 40px;
   padding: 0 14px;
@@ -1768,7 +1733,6 @@ select.select-xl {
 .switch.on {
   border-color: #62a8ea;
   box-shadow: #62a8ea 0 0 0 13px inset;
-  -webkit-transition: border 0.4s, box-shadow 0.4s, background-color 1.2s;
   transition: border 0.4s, box-shadow 0.4s, background-color 1.2s;
   background-color: #62a8ea;
   background-image: none;
@@ -1776,7 +1740,6 @@ select.select-xl {
 
 .switch.on:after {
   left: 21px;
-  -webkit-transition: background-color 0.4s, left 0.2s;
   transition: background-color 0.4s, left 0.2s;
   background-color: #FFF;
 }
@@ -1788,7 +1751,6 @@ select.select-xl {
 .switch.off {
   border-color: #dfdfdf;
   box-shadow: #dfdfdf 0 0 0 0 inset;
-  -webkit-transition: border 0.4s, box-shadow 0.4s;
   transition: border 0.4s, box-shadow 0.4s;
   background-color: #FFF;
   background-image: none;
@@ -1796,7 +1758,6 @@ select.select-xl {
 
 .switch.off:after {
   left: 0;
-  -webkit-transition: background-color 0.4s, left 0.2s;
   transition: background-color 0.4s, left 0.2s;
 }
 
@@ -2357,7 +2318,6 @@ select.select-xl {
   border: 1px solid #E4EAEC;
   border-radius: 4px;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
-  -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
   background-clip: padding-box;
 }
@@ -2507,7 +2467,6 @@ select.select-xl {
 .custom-dropup.open > .custom-dropdown-menu:before {
   top: auto;
   bottom: -10px;
-  -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
@@ -2598,7 +2557,6 @@ select.select-xl {
 .custom-dropup .custom-dropup-menu:before {
   top: auto;
   bottom: -10px;
-  -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
@@ -2630,7 +2588,6 @@ input[type=button]::-moz-focus-inner {
   cursor: pointer;
   display: inline-block;
   outline: none;
-  -webkit-transition: all 80ms linear;
   transition: all 80ms linear;
   -webkit-font-smoothing: antialiased;
   -webkit-touch-callout: none;
@@ -2641,7 +2598,7 @@ input[type=button]::-moz-focus-inner {
   white-space: nowrap;
   text-decoration: none !important;
   min-width: 40px;
-  font-family: "CirceWebRegular", "Open Sans", Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
   position: relative;
   text-shadow: 0 1px rgba(0, 0, 0, 0.1);
   font-size: 1rem;
@@ -2803,9 +2760,7 @@ input[type=button]::-moz-focus-inner {
 }
 
 .btn-loading {
-  -webkit-animation: loading-stripes 2s infinite linear;
-          animation: loading-stripes 2s infinite linear;
-  background-image: -webkit-linear-gradient(135deg, rgba(150, 150, 150, 0.2) 25%, transparent 25%, transparent 50%, rgba(150, 150, 150, 0.2) 50%, rgba(150, 150, 150, 0.2) 75%, transparent 75%, transparent) !important;
+  animation: loading-stripes 2s infinite linear;
   background-image: linear-gradient(-45deg, rgba(150, 150, 150, 0.2) 25%, transparent 25%, transparent 50%, rgba(150, 150, 150, 0.2) 50%, rgba(150, 150, 150, 0.2) 75%, transparent 75%, transparent) !important;
   background-size: 50px 50px !important;
 }
@@ -3359,7 +3314,6 @@ input[type=button]::-moz-focus-inner {
   margin-bottom: 5px;
   position: relative;
   top: 0;
-  -webkit-transition: all .2s ease-out;
   transition: all .2s ease-out;
 }
 
@@ -3382,7 +3336,6 @@ input[type=button]::-moz-focus-inner {
 }
 
 .navbar #btn-pay-balance:active {
-  -webkit-transform: scale(0.97);
   -ms-transform: scale(0.97);
   transform: scale(0.97);
 }
@@ -3514,7 +3467,6 @@ input[type=button]::-moz-focus-inner {
   bottom: 0;
   left: 0;
   overflow: hidden;
-  -webkit-transition: all 150ms linear;
   transition: all 150ms linear;
 }
 
@@ -3616,7 +3568,6 @@ input[type=button]::-moz-focus-inner {
   width: 40px;
   margin-left: -20px;
   height: 20px;
-  -webkit-filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.25));
   filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.25));
   fill: #FFF;
 }
@@ -3778,7 +3729,6 @@ input[type=button]::-moz-focus-inner {
   background: #FAFAFA;
   margin: auto;
   z-index: 2000;
-  -webkit-transition: all .3s ease-out;
   transition: all .3s ease-out;
   border: 1px solid #CCC;
   border-radius: 4px;
@@ -3851,7 +3801,6 @@ input[type=button]::-moz-focus-inner {
   background: #7D8B92;
   margin: 0 auto;
   display: inline-block;
-  -webkit-transition: all .2s ease;
   transition: all .2s ease;
   width: 60px;
   height: 60px;
@@ -3969,7 +3918,6 @@ input[type=button]::-moz-focus-inner {
   color: rgba(255, 255, 255, 0.9);
   border-radius: 4px;
   background: rgba(250, 250, 250, 0.15);
-  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
@@ -4195,7 +4143,6 @@ i.fa {
   width: 30px;
   height: 42px;
   overflow: hidden;
-  -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
   padding: 5px;
   cursor: pointer;
@@ -4205,7 +4152,6 @@ i.fa {
 .notify_overlay .overlay_arrow {
   position: absolute;
   left: -200px;
-  -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
   width: 100px;
@@ -4224,7 +4170,6 @@ i.fa {
   position: relative;
   height: 0;
   overflow: hidden;
-  -webkit-transition: height 0.35s ease;
   transition: height 0.35s ease;
 }
 
