@@ -23,7 +23,7 @@
         merge2 = require('merge2'),
         reload = browserSync.reload;
 
-    var prod = false,
+    var prod = true,
         minify = false;
 
     var path = {
