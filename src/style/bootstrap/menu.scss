@@ -476,6 +476,12 @@
         .whats_new__dropdown {
             height: 100%;
             cursor: pointer;
+
+            .custom-dropdown-menu {
+                &:before, &:after {
+                    display: none;
+                }
+            }
         }
         .icon-bell {
             //display: inline-block;
