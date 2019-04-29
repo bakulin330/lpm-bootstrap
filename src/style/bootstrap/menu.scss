@@ -7,15 +7,16 @@
         z-index: 1000;
     }
     .navbar-inner {
-        height: $top-menu-height;
-        border-radius: 0;
-        border: 0;
-        background: $color-title;
-        padding: 0;
-        @include box-shadow(0 1px 10px rgba(0, 0, 0, .1));
+        //height: $top-menu-height;
+        //border-radius: 0;
+        //border: 0;
+        //background: $color-title;
+        //padding: 0;
+        //@include box-shadow(0 1px 10px rgba(0, 0, 0, .1));
+
         .custom-dropdown.open {
             .top-menu-item {
-                background: #506064;
+                //background: #506064;
             }
         }
 
@@ -36,18 +37,19 @@
                 }
 
                 & > a {
-                    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-                    color: rgba(210, 210, 210, 0.9);
-                    line-height: $top-menu-height;
-                    font-size: $base-font-size;
-                    height: 100%;
-                    padding: 0 20px;
+                    //text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+                    //color: rgba(210, 210, 210, 0.9);
+                    //line-height: $top-menu-height;
+                    //font-size: $base-font-size;
+                    //height: 100%;
+                    //padding: 0 20px;
+
                     &:hover {
-                        background-color: transparent;
-                        color: #FFF;
+                        //background-color: transparent;
+                        //color: #FFF;
                     }
                     &:focus {
-                        background: transparent;
+                        //background: transparent;
                     }
 
                 }
