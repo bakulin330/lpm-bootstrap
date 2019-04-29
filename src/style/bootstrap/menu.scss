@@ -125,8 +125,12 @@
                     //left: auto;
                     //padding-top: 0;
                     //margin-top: 0;
+                    &:before {
+                        right: 19px;
+                    }
                     &:after {
                         //border-color: transparent transparent #F5F5F5 transparent;
+                        right: 19px;
                     }
                     .account-menu__info {
                         //background: $color-dark-snow;
@@ -256,7 +260,7 @@
             @include border-radius($base-border-radius);
 
             &:after {
-                display: none;
+                //display: none;
             }
         }
 
