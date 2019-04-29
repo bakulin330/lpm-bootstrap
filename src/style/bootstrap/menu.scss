@@ -234,28 +234,28 @@
             }
         }
         .custom-dropdown-btn {
-            height: 100%;
-            padding: 0 15px;
-            line-height: 40px;
-            color: #BBB;
-            text-decoration: none;
-            float: none;
-            display: block;
+            //height: 100%;
+            //padding: 0 15px;
+            //line-height: 40px;
+            //color: #BBB;
+            //text-decoration: none;
+            //float: none;
+            //display: block;
         }
         .custom-dropdown-menu {
-            position: absolute;
-            width: 450px;
-            z-index: 1000;
-            top: $top-menu-height;
-            height: 410px;
-            left: -350px;
-            background: transparent;
-            border: none;
-            @include box-shadow(0 0 15px rgba(0, 0, 0, .25));
-            @include border-radius($base-border-radius);
+            //position: absolute;
+            //width: 450px;
+            //z-index: 1000;
+            //top: $top-menu-height;
+            //height: 410px;
+            //left: -350px;
+            //background: transparent;
+            //border: none;
+            //@include box-shadow(0 0 15px rgba(0, 0, 0, .25));
+            //@include border-radius($base-border-radius);
             &:before,
             &:after {
-                right: 73px;
+                //right: 73px;
             }
 
         }
