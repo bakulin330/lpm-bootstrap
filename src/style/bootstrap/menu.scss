@@ -25,21 +25,7 @@
                 height: 100%;
                 float: left;
                 margin-left: 0;
-                &.active {
 
-                    & > a {
-                        padding-bottom: 7px;
-                        border-bottom: 4px solid $color-primary;
-                        background: #506064;
-                        text-shadow: 0 1px 0 #074F61;
-                        box-shadow: none;
-                        color: #FFF;
-                        &:hover {
-                            background: #506064;
-                        }
-
-                    }
-                }
                 &.separator {
                     background: #717171;
                     display: block;
@@ -48,6 +34,7 @@
                     margin: 13px 5px 0;
                     width: 1px;
                 }
+
                 & > a {
                     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
                     color: rgba(210, 210, 210, 0.9);
