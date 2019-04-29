@@ -653,15 +653,15 @@
         left: 80px;
     }
     &:before {
-        //content: '';
-        //width: 0;
-        //height: 0;
-        //border-style: solid;
-        //border-width: 0 13.5px 13px 13.5px;
-        //border-color: transparent transparent #CCC transparent;
-        //position: absolute;
-        //top: -13px;
-        //left: 79px;
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 13.5px 13px 13.5px;
+        border-color: transparent transparent #CCC transparent;
+        position: absolute;
+        top: -13px;
+        left: 79px;
     }
     .navbar-app__item-list {
         margin-left: -30px;

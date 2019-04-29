@@ -63,16 +63,16 @@ $dropdown-item-hover: #F3F7F9;
         margin-right: -10px;
     }
     &:before {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 0 11px 11px 11px;
-        border-color: transparent transparent #E4EAEC transparent;
-        top: -11px;
-        right: 50%;
-        margin-right: -11px;
+        //content: '';
+        //position: absolute;
+        //width: 0;
+        //height: 0;
+        //border-style: solid;
+        //border-width: 0 11px 11px 11px;
+        //border-color: transparent transparent #E4EAEC transparent;
+        //top: -11px;
+        //right: 50%;
+        //margin-right: -11px;
     }
     &.r-float,
     &.r_float {
