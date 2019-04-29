@@ -255,9 +255,8 @@
             @include box-shadow(0 0 15px rgba(0, 0, 0, .25));
             @include border-radius($base-border-radius);
 
-            &:before,
             &:after {
-                //right: 73px;
+                display: none;
             }
         }
 
