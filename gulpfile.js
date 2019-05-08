@@ -54,7 +54,7 @@
         logPrefix: "Frontend_Dev"
     };
 
-    gulp.task('default', ['build', 'webserver', 'watch']);
+    gulp.task('default', ['build', 'watch']);
 
     gulp.task('webserver', function () {
         browserSync(serverConfig);
