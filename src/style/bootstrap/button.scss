@@ -232,6 +232,14 @@ $btn-xl-height: round(($base-button-height * $btn-multiplier * $btn-multiplier)/
     }
 }
 
+.btn-success:visited {
+    @extend .btn-success;
+}
+
+.btn-success:focus {
+    @extend .btn-success;
+}
+
 .btn-info {
     background: $color-info;
     color: #FFF;
