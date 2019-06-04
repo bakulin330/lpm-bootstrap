@@ -18,8 +18,8 @@ $tooltip-bg: rgba(0, 0, 0, 0.8);
 
     .popover-title{
         padding:3px 13px;
-        font-size:$font-l;
-
+        font-size: 1em;
+        margin: 0;
     }
     &.top {
         margin-top: -10px;
